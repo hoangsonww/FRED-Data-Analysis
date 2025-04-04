@@ -44,8 +44,15 @@ This project is divided into two main parts:
 - MongoDB
 - Pinecone account
 - Google AI account
+- FRED API key
+- Pinecone API key
+- MongoDB URI
+- Google AI API key
+- Pinecone index name
+- OpenAI API key (optional, for chatbot functionality)
+- Claude AI API key (optional, for chatbot functionality)
 
-### Environment Variables
+### `.env` File
 
 Create a `.env` file in the `backend` directory with the following variables:
 
@@ -53,8 +60,16 @@ Create a `.env` file in the `backend` directory with the following variables:
 FRED_API_KEY=<your_fred_api_key>
 GOOGLE_AI_API_KEY=<your_google_ai_api_key>
 PINECONE_API_KEY=<your_pinecone_api_key>
-PINECONE_INDEX_NAME=fred-index
-MONGO_URI=<your_mongo_uri>
+PINECONE_INDEX_NAME=<your_pinecone_index_name>
+MONGO_URI=<your_mongo_connection_string>
+OPENAI_API_KEY=<your_openai_api_key>
+CLAUDE_API_KEY=<your_claude_api_key>
+```
+
+### Install Dependencies
+
+```bash
+npm install
 ```
 
 ## Instructions / Commands
