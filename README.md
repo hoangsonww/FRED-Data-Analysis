@@ -17,7 +17,7 @@ This project is divided into two main parts:
    - A detailed analysis of the FRED banking data using regression models and plots.
    - The analysis is performed using TypeScript and the results are saved in the `backend` directory.
    - The analysis includes linear regression, polynomial regression, and regression on daily percent change.
-   - The results are summarized in a report format, including charts and AI-generated summaries.
+   - The results are summarized in a report format, including charts and AI-generated & data-backed summaries.
    - Visit the [analysis section](#2-fred-banking-data-analysis-report) below for a detailed report on the FRED banking data analysis.
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
@@ -196,8 +196,16 @@ For each series, we performed multiple regression analyses—including linear re
 **Chart:**
 
 - A line chart overlaid with the linear regression line was generated and saved as `TOTALSL_analysis.png`.
+- Another chart with the second-order polynomial regression was also generated and saved as `TOTALSL_poly_order_2_analysis.png`.
+- Other charts for polynomial orders 3–10 were generated but are not included here due to their poor fit.
 
-![TOTALSL Analysis](backend/TOTALSL_analysis.png)
+<p align="center">
+  <img src="backend/TOTALSL_analysis.png" alt="TOTALSL Analysis" width="100%"/>
+</p>
+
+<p align="center">
+  <img src="backend/TOTALSL_poly_order_2_analysis.png" alt="TOTALSL Polynomial Order 2 Analysis" width="100%"/>
+</p>
 
 **AI Refined Summary Highlights:**
 
@@ -229,8 +237,11 @@ For each series, we performed multiple regression analyses—including linear re
 **Chart:**
 
 - The data and its linear regression line were plotted and saved as `TOTALSA_analysis.png`.
+- The polynomial regression charts were not generated due to their negative R² values, indicating they would not provide meaningful insights.
 
-![TOTALSA Analysis](backend/TOTALSA_analysis.png)
+<p align="center">
+  <img src="backend/TOTALSA_analysis.png" alt="TOTALSA Analysis" width="100%"/>
+</p>
 
 **AI Refined Summary Highlights:**
 
@@ -262,8 +273,11 @@ For each series, we performed multiple regression analyses—including linear re
 **Chart:**
 
 - A chart was generated and saved as `MPRIME_analysis.png`.
+- The polynomial regression charts were not generated due to their negative R² values, which would not provide meaningful insights.
 
-![MPRIME Analysis](backend/MPRIME_analysis.png)
+<p align="center">
+  <img src="backend/MPRIME_analysis.png" alt="MPRIME Analysis" width="100%"/>
+</p>
 
 **AI Refined Summary Highlights:**
 
@@ -295,8 +309,11 @@ For each series, we performed multiple regression analyses—including linear re
 **Chart:**
 
 - A chart with the linear regression overlay was generated and saved as `FEDFUNDS_analysis.png`.
+- The polynomial regression charts were not generated due to their negative R² values, indicating they would not provide meaningful insights.
 
-![FEDFUNDS Analysis](backend/FEDFUNDS_analysis.png)
+<p align="center">
+  <img src="backend/FEDFUNDS_analysis.png" alt="FEDFUNDS Analysis" width="100%"/>
+</p>
 
 **AI Refined Summary Highlights:**
 
@@ -312,6 +329,9 @@ For each series, we performed multiple regression analyses—including linear re
 
 - **Weak Signal in TOTALSA:**  
   The minimal explanatory power in TOTALSA highlights potential issues with the data or the need for additional explanatory variables to capture asset growth accurately.
+
+- **Polynomial Models Overfitting:**  
+  The negative R² values in higher-order polynomial models indicate that these approaches are not suitable for capturing the underlying trends in the data. This suggests a need for simpler models or alternative modeling techniques.
 
 ### Implications for the Banking Sector
 
@@ -372,4 +392,4 @@ In the near future, I will also explore the integration of machine learning mode
 
 ---
 
-Thank you for reviewing this report. For any questions or further analysis, please feel free to reach out.
+Thank you for reviewing this report. For any questions or further analysis, please feel free to reach out. 

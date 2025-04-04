@@ -10,7 +10,8 @@
     "query:pinecone": "tsx src/queryRag.ts",
     "chat": "tsx src/chatWithAI.ts",
     "analyze": "tsx src/analyzeFredData.ts",
-    "server": "tsx src/server.ts"
+    "server": "tsx src/server.ts",
+    "polyRegression": "tsx src/polyRegressions.ts"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.0",
