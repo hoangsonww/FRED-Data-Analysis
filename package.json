@@ -1,0 +1,28 @@
+{
+  "name": "banking-data-analysis",
+  "version": "1.0.0",
+  "description": "A comprehensive data analysis and visualization tool for FRED banking data.",
+  "main": "index.js",
+  "dependencies": {
+    "prettier": "^3.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "install": "npm run install:all",
+    "install:all": "npm --prefix frontend install && npm --prefix backend install",
+    "frontend": "npm --prefix frontend start",
+    "backend": "node backend/src/server.ts",
+    "build:backend": "npm --prefix backend run build",
+    "start:backend": "node backend/dist/server.js",
+    "dev:backend": "tsx backend/src/server.ts",
+    "run:all": "tsx backend/src/runAll.ts",
+    "query:pinecone": "tsx backend/src/queryRag.ts",
+    "chat": "tsx backend/src/chatWithAI.ts",
+    "analyze": "tsx backend/src/analyzeFredData.ts",
+    "server": "tsx backend/src/server.ts",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,scss,md,html}\""
+  },
+  "keywords": [],
+  "author": "data analytics, data science, data engineering, data visualization, machine learning, artificial intelligence, deep learning, neural networks, natural language processing, computer vision, big data, data mining, data warehousing, data governance, data quality, data management, data architecture",
+  "license": "MIT"
+}
