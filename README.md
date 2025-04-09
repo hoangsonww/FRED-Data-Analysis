@@ -84,6 +84,23 @@ npm install
 
 ## Instructions / Commands
 
+### Flow of Commands
+
+To run the application correctly, be sure that you run these commands in order to avoid any issues:
+
+1. **Analysis:** This script, in addition to performing data analysis, will also fetch the data from the FRED API and store it in MongoDB.
+   - It will also generate regression plots and AI-generated summaries.
+   - This is the first step to run this project.
+2. **Vectorization:** This script will vectorize the data and store it in Pinecone.
+   - This is of utmost importance for the chatbot functionality.
+3. **Chatbot:** This script allow you to ask questions about the FRED data using the vectorized data from Pinecone.
+   - The chatbot will use queried data from Pinecone to provide RAG-enhanced answers.
+4. **Express API:** This script will start the Express server and allow you to interact with the backend API. (Run if you want to use the frontend React application)
+   - The API endpoints are defined in the `src/server.ts` file. 
+5. **Frontend:** This script will start the React application and allow you to interact with the backend API in a more user-friendly manner.
+
+For more details on what specific commands to run, refer to the detailed guide below.
+
 ### To Run the Data Fetching & Vectorization Functionality
 
 ```bash
@@ -94,6 +111,19 @@ npx tsx src/runAll.ts
 This will fetch the data from the database, vectorize it, and store it in the vector database. Also store data in MongoDB.
 
 Alternatively, run `npm run run:all` to quickly start the data fetching and vectorization. (Run inside the `backend` directory)
+
+### To Upsert Data to Pinecone
+
+```bash
+cd backend
+npx tsx src/upsertFredData.ts
+```
+
+This will vectorize the data and upsert it to the Pinecone index. The results will be logged in the console.
+
+Alternatively, run `npm run upsert` to quickly start the upsert. (Run inside the `backend` directory)
+
+> Note: It may take quite long to fully process all the data, as there are approximately 10,000 data points to process!
 
 ### To Run the Query Pinecone Functionality
 
