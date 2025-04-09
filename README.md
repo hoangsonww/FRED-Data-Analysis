@@ -112,6 +112,8 @@ This will fetch the data from the database, vectorize it, and store it in the ve
 
 Alternatively, run `npm run run:all` to quickly start the data fetching and vectorization. (Run inside the `backend` directory)
 
+> Note: It may take quite long to fully process all the data, as there are approximately 10,000 data points to process!
+
 ### To Upsert Data to Pinecone
 
 ```bash
