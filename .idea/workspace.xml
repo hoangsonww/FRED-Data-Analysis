@@ -5,60 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e8dda9a-de4a-4d85-ad28-4e7315472793" name="Changes" comment="final: data analytics with poly regressions">
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/REPORT.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/CPIAUCSL_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/CPIAUCSL_log_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/DGS10_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/DGS10_log_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/FEDFUNDS_log_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/GDP_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/GDP_log_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/HOUST_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/HOUST_log_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/INDPRO_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/INDPRO_log_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/M2SL_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/M2SL_log_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/MPRIME_log_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/PPIACO_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/PPIACO_log_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/SP500_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/SP500_log_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/TOTALSA_log_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/TOTALSL_log_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/UNRATE_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/UNRATE_log_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/VIXCLS_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/VIXCLS_log_analysis.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/azureAI.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/scripts/azureAI.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/scripts/claudeAI.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/scripts/openAI.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/FEDFUNDS_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/FEDFUNDS_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/MPRIME_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/MPRIME_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSA_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/TOTALSA_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSL_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/TOTALSL_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/analyzeFredData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/analyzeFredData.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/chatWithAI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/chatWithAI.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/claudeAI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/claudeAI.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/dataIngestion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/dataIngestion.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/db.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/db.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/fetchAllSeries.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/fetchAllSeries.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/openAI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/openAI.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/pineconeClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/pineconeClient.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/polyRegressions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/polyRegressions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/queryRag.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/queryRag.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/runAll.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/runAll.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/server.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/upsertFredData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/upsertFredData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ChartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ChartPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ChatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ChatPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,29 +39,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/davidnguyen/WebstormProjects/banking-predictor",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.analyze.executor": "Run",
-    "npm.chat.executor": "Run",
-    "npm.format.executor": "Run",
-    "npm.polyRegression.executor": "Run",
-    "npm.server.executor": "Run",
-    "npm.start.executor": "Run",
-    "npm.upsert.executor": "Run",
-    "settings.editor.selected.configurable": "settings.sync",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/davidnguyen/WebstormProjects/banking-predictor&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.analyze.executor&quot;: &quot;Run&quot;,
+    &quot;npm.chat.executor&quot;: &quot;Run&quot;,
+    &quot;npm.format.executor&quot;: &quot;Run&quot;,
+    &quot;npm.polyRegression.executor&quot;: &quot;Run&quot;,
+    &quot;npm.server.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;npm.upsert.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -159,6 +107,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="server" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/backend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="server" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/frontend/package.json" />
       <command value="run" />
@@ -169,23 +127,13 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="upsert" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/backend/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="upsert" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="npm.chat" />
-        <item itemvalue="npm.format" />
-        <item itemvalue="npm.analyze" />
-        <item itemvalue="npm.upsert" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.server" />
+        <item itemvalue="npm.analyze" />
+        <item itemvalue="npm.format" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +160,7 @@
       <workItem from="1743775130314" duration="1194000" />
       <workItem from="1743798207682" duration="4000" />
       <workItem from="1743990641223" duration="2298000" />
-      <workItem from="1744163454289" duration="9367000" />
+      <workItem from="1744163454289" duration="10090000" />
     </task>
     <task id="LOCAL-00001" summary="final: data analytics done">
       <option name="closed" value="true" />
@@ -230,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743776931409</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="final: data analytics with poly regressions">
+      <option name="closed" value="true" />
+      <created>1744173658816</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744173658816</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
