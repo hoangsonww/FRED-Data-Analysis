@@ -77,7 +77,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.chat">
+  <component name="RunManager" selected="npm.analyze">
     <configuration name="analyze" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/backend/package.json" />
       <command value="run" />
@@ -130,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.format" />
         <item itemvalue="npm.chat" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.server" />
         <item itemvalue="npm.analyze" />
-        <item itemvalue="npm.format" />
       </list>
     </recent_temporary>
   </component>
