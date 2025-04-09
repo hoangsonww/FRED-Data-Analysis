@@ -68,7 +68,7 @@ const ChartPage: React.FC = () => {
   useEffect(() => {
     const fetchObservations = async () => {
       try {
-        const response = await fetch("http://localhost:3000/observations");
+        const response = await fetch("http://localhost:5050/observations");
         const data = await response.json();
         setObservations(data.observations);
       } catch (error) {

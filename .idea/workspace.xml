@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e8dda9a-de4a-4d85-ad28-4e7315472793" name="Changes" comment="final: data analytics with poly regressions">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/chatWithAI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/chatWithAI.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ChartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ChartPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ChatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ChatPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +77,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.chat">
     <configuration name="analyze" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/backend/package.json" />
       <command value="run" />
@@ -129,9 +130,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.chat" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.server" />
-        <item itemvalue="npm.chat" />
         <item itemvalue="npm.analyze" />
         <item itemvalue="npm.format" />
       </list>
@@ -160,7 +161,7 @@
       <workItem from="1743775130314" duration="1194000" />
       <workItem from="1743798207682" duration="4000" />
       <workItem from="1743990641223" duration="2298000" />
-      <workItem from="1744163454289" duration="10090000" />
+      <workItem from="1744163454289" duration="10650000" />
     </task>
     <task id="LOCAL-00001" summary="final: data analytics done">
       <option name="closed" value="true" />
@@ -186,11 +187,38 @@
       <option name="project" value="LOCAL" />
       <updated>1744173658816</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="final: data analytics with poly regressions">
+      <option name="closed" value="true" />
+      <created>1744174133083</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1744174133083</updated>
+    </task>
+    <task id="LOCAL-00005" summary="final: data analytics with poly regressions">
+      <option name="closed" value="true" />
+      <created>1744174252206</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1744174252206</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
