@@ -3,7 +3,7 @@
 _By David Nguyen, 04/08/2025_
 
 This repository contains a mockup full-stack application that fetches banking data from the FRED API, vectorizes it using Pinecone, and provides a chatbot interface for querying the data.
-The application is built with TypeScript and uses Express for the backend. The frontend is a simple React application that interacts with the backend API.
+The application is built with TypeScript and uses Express for the backend. The frontend is a simple MUI-Powered React application that interacts with the backend API in a more user-friendly manner.
 
 This project is divided into two main parts:
 
@@ -24,6 +24,7 @@ This project is divided into two main parts:
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Material UI](https://img.shields.io/badge/MUI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Pinecone](https://img.shields.io/badge/Pinecone-5D3FD3?style=for-the-badge&logo=pinecone&logoColor=white)
 ![Google AI](https://img.shields.io/badge/Google%20AI-4285F4?style=for-the-badge&logo=google&logoColor=white)
@@ -51,6 +52,9 @@ This project is divided into two main parts:
 - Pinecone index name
 - OpenAI API key (optional, for chatbot functionality)
 - Claude AI API key (optional, for chatbot functionality)
+- Azure OpenAI API key (optional, for chatbot functionality)
+- Azure OpenAI endpoint (optional, for chatbot functionality)
+- Azure OpenAI deployment ID (optional, for chatbot functionality)
 
 ### `.env` File
 
@@ -111,6 +115,14 @@ This will start a chatbot session where you can ask questions about the banking 
 Change the query in the `src/chatWithAI.ts` file to test different queries.
 
 Alternatively, run `npm run chat` to quickly start the chatbot. (Run inside the `backend` directory)
+
+Additionally, if you'd also like to use Claude AI, Azure AI, or OpenAI, you can simply run (in the `backend` directory):
+
+```bash
+npm run claudeAI # for Claude AI
+npm run azureAI  # for Azure AI
+npm run openAI   # for OpenAI
+```
 
 ### To Analyze FRED Data with Regressions and Plots
 

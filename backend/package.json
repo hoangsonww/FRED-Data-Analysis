@@ -10,6 +10,8 @@
     "query:pinecone": "tsx src/queryRag.ts",
     "chat": "tsx src/chatWithAI.ts",
     "claudeAI": "tsx src/scripts/claudeAI.ts",
+    "azureAI": "tsx src/scripts/azureAI.ts",
+    "openAI": "tsx src/scripts/openAI.ts",
     "upsert": "tsx src/upsertFredData.ts",
     "analyze": "tsx src/analyzeFredData.ts",
     "server": "tsx src/server.ts",
