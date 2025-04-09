@@ -2,7 +2,7 @@
 
 _By David Nguyen, 04/08/2025_
 
-This repository contains a mockup full-stack application that fetches a wide range of economic data from the FRED API, vectorizes it using Pinecone, and provides a chatbot interface for querying the data.
+This repository contains a mockup full-stack application that fetches a wide range of U.S. economic data from the FRED API, vectorizes it using Pinecone, and provides a chatbot interface for querying the data.
 The application is built with TypeScript and uses Express for the backend. The frontend is a simple MUI-Powered React application that interacts with the backend API in a more user-friendly manner.
 
 This project is divided into two main parts:
@@ -918,7 +918,7 @@ For each series, we performed multiple regression analyses—including linear re
 
 ### Remarks
 
-This analysis provides a foundational understanding of key banking and economic indicators using regression analysis. The insights gathered will guide further research and practical applications in financial analytics. Future improvements will focus on enhanced data quality, more robust models, and advanced forecasting techniques to offer deeper insights into the economic landscape.
+This analysis provides a foundational understanding of key U.S. banking and economic indicators using regression analysis. The insights gathered will guide further research and practical applications in financial analytics. Future improvements will focus on enhanced data quality, more robust models, and advanced forecasting techniques to offer deeper insights into the economic landscape.
 
 ---
 
