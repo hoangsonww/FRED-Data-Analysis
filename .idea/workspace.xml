@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e8dda9a-de4a-4d85-ad28-4e7315472793" name="Changes" comment="final: data analytics with poly regressions">
-      <change beforePath="$PROJECT_DIR$/backend/src/chatWithAI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/chatWithAI.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ChartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ChartPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ChatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ChatPage.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="5e8dda9a-de4a-4d85-ad28-4e7315472793" name="Changes" comment="final: data analytics with poly regressions" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,29 +36,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/davidnguyen/WebstormProjects/banking-predictor&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.analyze.executor&quot;: &quot;Run&quot;,
-    &quot;npm.chat.executor&quot;: &quot;Run&quot;,
-    &quot;npm.format.executor&quot;: &quot;Run&quot;,
-    &quot;npm.polyRegression.executor&quot;: &quot;Run&quot;,
-    &quot;npm.server.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;npm.upsert.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/davidnguyen/WebstormProjects/banking-predictor/frontend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.analyze.executor": "Run",
+    "npm.chat.executor": "Run",
+    "npm.format.executor": "Run",
+    "npm.polyRegression.executor": "Run",
+    "npm.server.executor": "Run",
+    "npm.start.executor": "Run",
+    "npm.upsert.executor": "Run",
+    "settings.editor.selected.configurable": "settings.sync",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -74,10 +70,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend" />
+      <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.analyze">
+  <component name="RunManager" selected="npm.start">
     <configuration name="analyze" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/backend/package.json" />
       <command value="run" />
@@ -130,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.format" />
-        <item itemvalue="npm.chat" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.server" />
         <item itemvalue="npm.analyze" />
+        <item itemvalue="npm.chat" />
+        <item itemvalue="npm.format" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +159,7 @@
       <workItem from="1743775130314" duration="1194000" />
       <workItem from="1743798207682" duration="4000" />
       <workItem from="1743990641223" duration="2298000" />
-      <workItem from="1744163454289" duration="10650000" />
+      <workItem from="1744163454289" duration="11022000" />
     </task>
     <task id="LOCAL-00001" summary="final: data analytics done">
       <option name="closed" value="true" />
@@ -203,7 +201,39 @@
       <option name="project" value="LOCAL" />
       <updated>1744174252206</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="final: data analytics with poly regressions">
+      <option name="closed" value="true" />
+      <created>1744174706681</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1744174706681</updated>
+    </task>
+    <task id="LOCAL-00007" summary="final: data analytics with poly regressions">
+      <option name="closed" value="true" />
+      <created>1744174899530</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1744174899530</updated>
+    </task>
+    <task id="LOCAL-00008" summary="final: data analytics with poly regressions">
+      <option name="closed" value="true" />
+      <created>1744174949898</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1744174949898</updated>
+    </task>
+    <task id="LOCAL-00009" summary="final: data analytics with poly regressions">
+      <option name="closed" value="true" />
+      <created>1744174985166</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1744174985166</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

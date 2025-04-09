@@ -29,11 +29,21 @@ export interface FredObservation {
  * This file fetches FRED data, performs enhanced multi-regression analysis on raw data,
  * generates charts (including both linear and polynomial regression overlays),
  * and uses the Google Gemini API for a detailed natural language summary.
- * Multiple series are processed:
- *   - TOTALSL: Total Loans and Leases at Commercial Banks
- *   - TOTALSA: Total Assets of Commercial Banks
- *   - MPRIME: Bank Prime Loan Rate
- *   - FEDFUNDS: Effective Federal Funds Rate
+ * Multiple series are processed, including:
+ *   - TOTALSL: Total Loans and Leases at Commercial Banks (Banking)
+ *   - TOTALSA: Total Assets of Commercial Banks (Banking)
+ *   - MPRIME: Bank Prime Loan Rate (Banking)
+ *   - FEDFUNDS: Effective Federal Funds Rate (Monetary Policy)
+ *   - INDPRO: Industrial Production Index (Manufacturing/Industry)
+ *   - CPIAUCSL: Consumer Price Index (Prices)
+ *   - UNRATE: Unemployment Rate (Labor Market)
+ *   - GDP: Gross Domestic Product (Overall Economy)
+ *   - PPIACO: Producer Price Index: All Commodities (Prices)
+ *   - HOUST: Housing Starts: Total (Housing)
+ *   - M2SL: M2 Money Stock (Financial)
+ *   - DGS10: 10-Year Treasury Constant Maturity Rate (Bond Markets)
+ *   - SP500: S&P 500 Index (Stock Market)
+ *   - VIXCLS: CBOE Volatility Index (Market Volatility)
  *
  * @author David Nguyen
  * @date 2024-04-08
@@ -160,7 +170,7 @@ async function performPolynomialRegressions(
       model: `Polynomial Regression (order ${order})`,
       equation: result.string,
       r2: result.r2,
-      predictions: result.points, // Array of [x, y] predictions
+      predictions: result.points,
       order: order,
     });
   }
@@ -174,7 +184,6 @@ function performPercentChangeRegression(
   data: { date: Date; value: number }[],
 ): regression.Result {
   const percentData = computePercentChange(data);
-  // Use the index as the independent variable for percent change as well.
   const regressionData: [number, number][] = percentData.map((d, idx) => [
     idx,
     d.value,
@@ -252,11 +261,9 @@ async function generatePolynomialChart(
   const baseTime = data[0].date.getTime();
   const labels = data.map((d) => d.date.toISOString().split("T")[0]);
   const originalValues = data.map((d) => d.value);
-  // Map the regression prediction points to the original data timeline.
   const regressionValues = polyResult.predictions.map(
     (pt: [number, number]) => pt[1],
   );
-
   const width = 800,
     height = 600;
   const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height });
@@ -432,7 +439,6 @@ async function analyzeAndSummarizeSeries(seriesId: string): Promise<string> {
 
   // Use Gemini API to get an AI-refined summary.
   const detailedSummary = await summarizeStatistics(prompt);
-
   return `${prompt}\n\nAI Refined Summary:\n${detailedSummary}`;
 }
 
@@ -441,10 +447,20 @@ async function analyzeAndSummarizeSeries(seriesId: string): Promise<string> {
  */
 async function main() {
   const seriesIds: string[] = [
-    "TOTALSL", // Total Loans and Leases at Commercial Banks
-    "TOTALSA", // Total Assets of Commercial Banks
-    "MPRIME", // Bank Prime Loan Rate
-    "FEDFUNDS", // Effective Federal Funds Rate
+    "TOTALSL", // Total Loans and Leases at Commercial Banks (Banking)
+    "TOTALSA", // Total Assets of Commercial Banks (Banking)
+    "MPRIME", // Bank Prime Loan Rate (Banking)
+    "FEDFUNDS", // Effective Federal Funds Rate (Monetary Policy)
+    "INDPRO", // Industrial Production Index (Manufacturing/Industry)
+    "CPIAUCSL", // Consumer Price Index (Prices)
+    "UNRATE", // Unemployment Rate (Labor Market)
+    "GDP", // Gross Domestic Product (Overall Economy)
+    "PPIACO", // Producer Price Index: All Commodities (Prices)
+    "HOUST", // Housing Starts: Total (Housing)
+    "M2SL", // M2 Money Stock (Financial)
+    "DGS10", // 10-Year Treasury Constant Maturity Rate (Bond Markets)
+    "SP500", // S&P 500 Index (Stock Market)
+    "VIXCLS", // CBOE Volatility Index (Market Volatility)
   ];
 
   // First, fetch and store raw data for all series.
