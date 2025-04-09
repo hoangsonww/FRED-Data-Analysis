@@ -1,24 +1,24 @@
-# FRED Data Analysis Project - Banking Sector
+# FRED Data Analysis Project - A Comprehensive Analysis of the U.S. Economy
 
 _By David Nguyen, 04/08/2025_
 
-This repository contains a mockup full-stack application that fetches banking data from the FRED API, vectorizes it using Pinecone, and provides a chatbot interface for querying the data.
+This repository contains a mockup full-stack application that fetches a wide range of economic data from the FRED API, vectorizes it using Pinecone, and provides a chatbot interface for querying the data.
 The application is built with TypeScript and uses Express for the backend. The frontend is a simple MUI-Powered React application that interacts with the backend API in a more user-friendly manner.
 
 This project is divided into two main parts:
 
 1. The [application](#1-the-full-stack-application):
-   - A sample full-stack application that fetches banking data from the FRED API, clean and preprocesses it, and stores it in a MongoDB database.
+   - A sample full-stack application that fetches a wide range of economic data from the FRED API, clean and preprocesses it, and stores it in a MongoDB database.
    - It also vectorizes the data using Pinecone and provides a chatbot with RAG (retrieval-augmented generation) capabilities.
    - The backend is built with TypeScript and uses Express for the server.
    - The frontend is a simple React application that interacts with the backend API.
    - Visit the [application section](#1-the-full-stack-application) below for setup instructions and commands to run the application.
-2. The [analysis](#2-fred-banking-data-analysis-report):
-   - A detailed analysis of the FRED banking data using regression models and plots.
+2. The [analysis](#2-fred-economics-data-analysis-report):
+   - A detailed analysis of the FRED economics data using regression models and plots.
    - The analysis is performed using TypeScript and the results are saved in the `backend` directory.
    - The analysis includes linear regression, polynomial regression, regression on daily percent change, and logarithmic regression.
    - The results are summarized in a report format, including charts and AI-generated & data-backed summaries.
-   - Visit the [analysis section](#2-fred-banking-data-analysis-report) below for a detailed report on the FRED banking data analysis.
+   - Visit the [analysis section](#2-fred-economics-data-analysis-report) below for a detailed report on the FRED economic data analysis.
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
@@ -113,7 +113,7 @@ cd backend
 npx tsx src/chatWithAI.ts
 ```
 
-This will start a chatbot session where you can ask questions about the banking data. The chatbot will use the vectorized data from Pinecone to provide answers. The results will be logged in the console.
+This will start a chatbot session where you can ask questions about the FRED data. The chatbot will use the vectorized data from Pinecone to provide answers. The results will be logged in the console.
 
 Change the query in the `src/chatWithAI.ts` file to test different queries.
 
@@ -169,13 +169,13 @@ Here is how the frontend UI looks like:
   <img src="frontend/public/frontend.png" alt="Frontend UI" width="100%"/>
 </p>
 
-It will allow you to chat with the AI and ask questions about the banking data. The chatbot will use the vectorized data from Pinecone to provide answers.
+It will allow you to chat with the AI and ask questions about the FRED data. The chatbot will use the vectorized data from Pinecone to provide answers.
 
 Additionally, it will also allow you to view the regression plots generated from the analysis in a more interactive and user-friendly manner.
 
 ---
 
-# 2. FRED Banking Data Analysis Report
+# 2. FRED Economics Data Analysis Report
 
 ## Table of Contents
 
@@ -201,7 +201,7 @@ Additionally, it will also allow you to view the regression plots generated from
 
 ## Overview
 
-This report summarizes the results from our comprehensive regression analysis of key banking indicators obtained from the FRED API. The analysis was conducted on cleaned and preprocessed data. The following series were analyzed:
+This report summarizes the results from our comprehensive regression analysis of key economic indicators obtained from the FRED API. The analysis was conducted on cleaned and preprocessed data. The following series were analyzed:
 
 - **TOTALSL** – Total Loans and Leases at Commercial Banks
 - **TOTALSA** – Total Assets of Commercial Banks
@@ -862,7 +862,7 @@ For each series, we performed multiple regression analyses—including linear re
 - **Logarithmic Models Provide Limited Improvement:**  
   While a logarithmic transformation can sometimes capture nonlinearity, in these analyses they generally do not significantly outperform the simpler linear models.
 
-### Implications for the Banking Sector
+### Implications for the Banking Sector & Beyond
 
 - **Credit Growth and Economic Expansion:**  
   A robust upward trend in TOTALSL indicates strong credit expansion—typically a sign of economic growth, though it may also signal rising credit risk.
@@ -875,6 +875,18 @@ For each series, we performed multiple regression analyses—including linear re
 
 - **Risk Management and Forecasting:**  
   Reliable linear models for key series (e.g., TOTALSL, MPRIME, FEDFUNDS) provide a foundation for forecasting and risk management, although further refinement using advanced models may improve predictive power.
+
+- **Market Volatility:**  
+  The weak performance of models for DGS10 and VIXCLS suggests that these series are influenced by complex factors beyond simple linear relationships, necessitating more sophisticated modeling techniques.
+
+- **Investment Strategies:**   
+  The strong linear trend in SP500 indicates a favorable investment climate, while the weak performance of VIXCLS models suggests that volatility may not be easily predictable.
+
+- **Consumer Behavior Insights:**   
+  The CPIAUCSL and UNRATE models indicate that consumer price changes and unemployment rates are not easily predictable, which may affect consumer spending and investment decisions.
+
+- **Housing Market Dynamics:**  
+  The strong linear trend in HOUST suggests a stable housing market, but the weak performance of polynomial models indicates that external factors may significantly influence housing starts.
 
 ### Recommendations
 
@@ -901,7 +913,7 @@ For each series, we performed multiple regression analyses—including linear re
 - **Implement Forecasting Models:**  
   Explore advanced forecasting methods to improve future trend predictions.
 
-- **Conduct In-Depth Diagnostics:**  
+- **Conduct More In-Depth Diagnostics:**  
   Carry out detailed diagnostic tests on model residuals to validate assumptions and refine model selection.
 
 ### Remarks

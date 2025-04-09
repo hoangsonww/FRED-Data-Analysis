@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e8dda9a-de4a-4d85-ad28-4e7315472793" name="Changes" comment="final: data analytics with poly regressions" />
+    <list default="true" id="5e8dda9a-de4a-4d85-ad28-4e7315472793" name="Changes" comment="final: enhanced with comprehensive data sources">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/polyRegressions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/polyRegressions.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +41,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Node.js.polyRegressions.ts.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -75,7 +79,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="npm.polyRegression">
     <configuration name="analyze" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/backend/package.json" />
       <command value="run" />
@@ -96,11 +100,11 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="format" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
+    <configuration name="polyRegression" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/backend/package.json" />
       <command value="run" />
       <scripts>
-        <script value="format" />
+        <script value="polyRegression" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -128,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.polyRegression" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.server" />
         <item itemvalue="npm.analyze" />
         <item itemvalue="npm.chat" />
-        <item itemvalue="npm.format" />
       </list>
     </recent_temporary>
   </component>
@@ -159,7 +163,7 @@
       <workItem from="1743775130314" duration="1194000" />
       <workItem from="1743798207682" duration="4000" />
       <workItem from="1743990641223" duration="2298000" />
-      <workItem from="1744163454289" duration="11022000" />
+      <workItem from="1744163454289" duration="11390000" />
     </task>
     <task id="LOCAL-00001" summary="final: data analytics done">
       <option name="closed" value="true" />
@@ -233,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744174985166</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="final: enhanced with comprehensive data sources">
+      <option name="closed" value="true" />
+      <created>1744175260813</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1744175260813</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +267,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="final: data analytics done" />
     <MESSAGE value="final: data analytics with poly regressions" />
-    <option name="LAST_COMMIT_MESSAGE" value="final: data analytics with poly regressions" />
+    <MESSAGE value="final: enhanced with comprehensive data sources" />
+    <option name="LAST_COMMIT_MESSAGE" value="final: enhanced with comprehensive data sources" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
