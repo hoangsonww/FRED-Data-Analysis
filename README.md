@@ -91,6 +91,8 @@ To run the application correctly, be sure that you run these commands in order t
 1. **Analysis:** This script, in addition to performing data analysis, will also fetch the data from the FRED API and store it in MongoDB.
    - It will also generate regression plots and AI-generated summaries.
    - This is the first step to run this project.
+   - Alternatively, you can also run the **polynomial regression** script to analyze the data - it does the same thing as the analysis script but is more focused on polynomial regression.
+   - Check out the `dataIngestion.ts` file for more details on how the data is fetched and stored, as well as the ETL pipeline that is used to clean and preprocess the data.
 2. **Vectorization:** This script will vectorize the data and store it in Pinecone.
    - This is of utmost importance for the chatbot functionality.
 3. **Chatbot:** This script allow you to ask questions about the FRED data using the vectorized data from Pinecone.
@@ -149,7 +151,7 @@ This will start a chatbot session where you can ask questions about the FRED dat
 
 Change the query in the `src/chatWithAI.ts` file to test different queries.
 
-Alternatively, run `npm run chat` to quickly start the chatbot. (Run inside the `backend` directory)
+Alternatively, run `npm run chat` to quickly use the chatbot feature. (Run inside the `backend` directory)
 
 Additionally, if you'd also like to use Claude AI, Azure AI, or OpenAI, you can simply run (in the `backend` directory):
 
@@ -158,6 +160,8 @@ npm run claudeAI # for Claude AI
 npm run azureAI  # for Azure AI
 npm run openAI   # for OpenAI
 ```
+
+This will allow you to compare/contrast the different AI models and see which one works best for your use case.
 
 ### To Analyze FRED Data with Regressions and Plots
 
@@ -203,7 +207,7 @@ Here is how the frontend UI looks like:
 
 It will allow you to chat with the AI and ask questions about the FRED data. The chatbot will use the vectorized data from Pinecone to provide answers.
 
-Additionally, it will also allow you to view the regression plots generated from the analysis in a more interactive and user-friendly manner.
+Additionally, it will also allow you to view the regression plots generated from the analysis in a more interactive and user-friendly manner via `Chart.js`.
 
 ---
 
