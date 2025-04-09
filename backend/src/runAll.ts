@@ -12,6 +12,9 @@ dotenv.config();
  * with the Google Gemini API to demonstrate the integration and the
  * ability of Retrieval-Augmented Generation (RAG) to provide
  * contextualized answers.
+ *
+ * @author David Nguyen
+ * @date 2024-04-08
  */
 async function main() {
   console.log("=== Starting FRED Data Ingestion ===");

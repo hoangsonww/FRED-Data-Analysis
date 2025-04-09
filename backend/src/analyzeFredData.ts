@@ -25,18 +25,32 @@ export interface FredObservation {
 }
 
 /**
- * @file dataIngestion.ts
+ * @file analyzeFredData.ts
  * This file fetches FRED data, performs enhanced multi-regression analysis on raw data,
  * generates charts, and uses Google Gemini API for a detailed natural language summary.
- * Multiple series are processed:
- *   - TOTALSL: Total Loans and Leases at Commercial Banks
- *   - TOTALSA: Total Assets of Commercial Banks
- *   - MPRIME: Bank Prime Loan Rate
- *   - FEDFUNDS: Effective Federal Funds Rate
+ * Multiple series are processed including data from various economic sectors:
+ *   - TOTALSL: Total Loans and Leases at Commercial Banks (Banking)
+ *   - TOTALSA: Total Assets of Commercial Banks (Banking)
+ *   - MPRIME: Bank Prime Loan Rate (Banking)
+ *   - FEDFUNDS: Effective Federal Funds Rate (Monetary Policy)
+ *   - INDPRO: Industrial Production Index (Manufacturing/Industry)
+ *   - CPIAUCSL: Consumer Price Index for All Urban Consumers (Prices)
+ *   - UNRATE: Unemployment Rate (Labor Market)
+ *   - GDP: Gross Domestic Product (Overall Economy)
+ *   - PPIACO: Producer Price Index for All Commodities (Prices)
+ *   - HOUST: Housing Starts: Total (Housing)
+ *   - M2SL: M2 Money Stock (Financial)
+ *   - DGS10: 10-Year Treasury Constant Maturity Rate (Bond Markets)
+ *   - SP500: S&P 500 Index (Stock Market)
+ *   - VIXCLS: CBOE Volatility Index (Market Volatility)
+ *
+ *  @author David Nguyen
+ *  @date 2024-04-08
  */
 
 /**
  * Fetches FRED data for a given series ID.
+ * Now filters out any observation with a non-numeric value.
  */
 export async function fetchFredData(
   seriesId: string,
@@ -56,10 +70,13 @@ export async function fetchFredData(
     );
   }
   const observations = response.data.observations;
-  return observations.map((obs: any) => ({
-    date: obs.date,
-    value: parseFloat(obs.value),
-  }));
+  // Map each observation to a FredObservation and filter out any with non-numeric values
+  return observations
+    .map((obs: any) => {
+      const value = parseFloat(obs.value);
+      return { date: obs.date, value };
+    })
+    .filter((obs: any) => !isNaN(obs.value));
 }
 
 /**
@@ -178,6 +195,21 @@ function performPercentChangeRegression(
 }
 
 /**
+ * Performs a logarithmic regression on the raw data.
+ * Uses the number of days since the first observation (with a +1 adjustment to avoid log(0)).
+ */
+function performLogRegression(
+  data: { date: Date; value: number }[],
+): regression.Result {
+  const baseTime = data[0].date.getTime();
+  const dataPoints: [number, number][] = data.map((d) => [
+    (d.date.getTime() - baseTime) / (1000 * 60 * 60 * 24) + 1,
+    d.value,
+  ]);
+  return regression.logarithmic(dataPoints, { precision: 4 });
+}
+
+/**
  * Generates a chart of raw data with an overlay of the linear regression line.
  */
 async function generateChart(
@@ -228,6 +260,65 @@ async function generateChart(
   };
   const imageBuffer = await chartJSNodeCanvas.renderToBuffer(config);
   const imagePath = `./${seriesId}_analysis.png`;
+  fs.writeFileSync(imagePath, imageBuffer);
+  return imagePath;
+}
+
+/**
+ * Generates a chart of raw data with an overlay of the logarithmic regression line.
+ */
+async function generateLogChart(
+  seriesId: string,
+  data: { date: Date; value: number }[],
+  logResult: regression.Result,
+): Promise<string> {
+  const baseTime = data[0].date.getTime();
+  const labels = data.map((d) => d.date.toISOString().split("T")[0]);
+  const originalValues = data.map((d) => d.value);
+  // Compute predictions for logarithmic regression (adjusting x with +1)
+  const regressionValues = data.map(
+    (d) =>
+      logResult.predict(
+        (d.date.getTime() - baseTime) / (1000 * 60 * 60 * 24) + 1,
+      )[1],
+  );
+  const width = 800,
+    height = 600;
+  const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height });
+  const config = {
+    type: "line" as const,
+    data: {
+      labels,
+      datasets: [
+        {
+          label: `${seriesId} Raw Data`,
+          data: originalValues,
+          borderColor: "blue",
+          fill: false,
+        },
+        {
+          label: "Logarithmic Regression",
+          data: regressionValues,
+          borderColor: "green",
+          fill: false,
+        },
+      ],
+    },
+    options: {
+      scales: {
+        x: { title: { display: true, text: "Date" } },
+        y: { title: { display: true, text: "Value" } },
+      },
+      plugins: {
+        title: {
+          display: true,
+          text: `Logarithmic Regression Analysis for ${seriesId}`,
+        },
+      },
+    },
+  };
+  const imageBuffer = await chartJSNodeCanvas.renderToBuffer(config);
+  const imagePath = `./${seriesId}_log_analysis.png`;
   fs.writeFileSync(imagePath, imageBuffer);
   return imagePath;
 }
@@ -291,8 +382,9 @@ async function summarizeStatistics(prompt: string): Promise<string> {
  *  - Retrieves raw data from MongoDB.
  *  - Runs a linear regression on raw data.
  *  - Runs 10 polynomial regressions.
+ *  - Runs a logarithmic regression on raw data.
  *  - Runs a regression on the daily percent change.
- *  - Generates a chart of raw data with the linear regression line.
+ *  - Generates charts of raw data with the linear and logarithmic regression lines.
  *  - Builds a detailed prompt that includes all regression results.
  *  - Uses Gemini API to produce a refined summary.
  */
@@ -306,10 +398,14 @@ async function analyzeAndSummarizeSeries(seriesId: string): Promise<string> {
   const linResult = performLinearRegression(rawData);
   // Polynomial regressions
   const polyResults = await performPolynomialRegressions(rawData);
+  // Logarithmic regression on raw data
+  const logResult = performLogRegression(rawData);
   // Regression on percent change data
   const percentResult = performPercentChangeRegression(rawData);
   // Generate chart for raw data with linear regression overlay
   const chartPath = await generateChart(seriesId, rawData, linResult);
+  // Generate chart for raw data with logarithmic regression overlay
+  const logChartPath = await generateLogChart(seriesId, rawData, logResult);
 
   // Build a detailed prompt for AI summarization
   let prompt = `=== Detailed Analysis for FRED Series: ${seriesId} ===\n`;
@@ -328,12 +424,18 @@ async function analyzeAndSummarizeSeries(seriesId: string): Promise<string> {
   });
   prompt += `\n`;
 
+  // Logarithmic Regression
+  prompt += `-- Logarithmic Regression --\n`;
+  prompt += `Equation: y = ${logResult.equation[0]} * ln(days) + ${logResult.equation[1]}\n`;
+  prompt += `R²: ${logResult.r2.toFixed(4)}\n\n`;
+
   // Percent Change Regression
   prompt += `-- Percent Change Regression --\n`;
   prompt += `Equation: y = ${percentResult.equation[0]} * (index) + ${percentResult.equation[1]}\n`;
   prompt += `R²: ${percentResult.r2.toFixed(4)}\n\n`;
 
-  prompt += `Chart saved to: ${chartPath}\n`;
+  prompt += `Chart (Linear Regression) saved to: ${chartPath}\n`;
+  prompt += `Chart (Logarithmic Regression) saved to: ${logChartPath}\n`;
   prompt += `Note: Data was analyzed as raw (without cleaning or normalization).\n`;
 
   // Use Gemini API to get an AI-refined summary.
@@ -344,13 +446,27 @@ async function analyzeAndSummarizeSeries(seriesId: string): Promise<string> {
 
 /**
  * Main function: Process multiple FRED series and output a detailed summary for each.
+ *
+ * @author David Nguyen
+ * @date 2024-04-08
  */
 async function main() {
+  // A comprehensive list of series covering a wide variety of economic sectors.
   const seriesIds: string[] = [
-    "TOTALSL", // Total Loans and Leases at Commercial Banks
-    "TOTALSA", // Total Assets of Commercial Banks
-    "MPRIME", // Bank Prime Loan Rate
-    "FEDFUNDS", // Effective Federal Funds Rate
+    "TOTALSL", // Total Loans and Leases at Commercial Banks (Banking)
+    "TOTALSA", // Total Assets of Commercial Banks (Banking)
+    "MPRIME", // Bank Prime Loan Rate (Banking)
+    "FEDFUNDS", // Effective Federal Funds Rate (Monetary Policy)
+    "INDPRO", // Industrial Production Index (Manufacturing/Industry)
+    "CPIAUCSL", // Consumer Price Index (Prices)
+    "UNRATE", // Unemployment Rate (Labor Market)
+    "GDP", // Gross Domestic Product (Overall Economy)
+    "PPIACO", // Producer Price Index: All Commodities (Prices)
+    "HOUST", // Housing Starts: Total (Housing)
+    "M2SL", // M2 Money Stock (Financial)
+    "DGS10", // 10-Year Treasury Constant Maturity Rate (Bond Markets)
+    "SP500", // S&P 500 Index (Stock Market)
+    "VIXCLS", // CBOE Volatility Index (Market Volatility)
   ];
 
   // First, fetch and store raw data for all series.

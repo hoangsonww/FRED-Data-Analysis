@@ -5,21 +5,13 @@ import {
   GenerationConfig,
 } from "@google/generative-ai";
 import dotenv from "dotenv";
-import { queryRag } from "./queryRag";
+import { queryRag } from "../queryRag";
 
 /**
  * @file chatWithAI.ts
  * This file contains the function to interact with the Google Gemini AI model.
  * It retrieves relevant knowledge from Pinecone and generates a response
  * based on the user's message and the retrieved context.
- *
- * The prompt has been refined to instruct the AI to provide definitive, data-backed responses.
- * Every statement must be supported by citations referencing the provided context. If making
- * a prediction (for example, on future FED interest rate movements), the answer must include
- * historical data-backed reasoning along with the relevant citation IDs.
- *
- * @author David Nguyen
- * @date 2024-04-08
  */
 
 dotenv.config();
@@ -28,11 +20,12 @@ dotenv.config();
  * Sends a chat message to Gemini AI, first searching Pinecone for relevant knowledge.
  * The retrieved knowledge is appended to the conversation history as additional context,
  * including citation IDs. When generating the answer, the AI is instructed to include these
- * citations precisely and base every statement on data-backed evidence.
+ * citations correctly.
  *
  * Implements RAG (Retrieval-Augmented Generation) by querying Pinecone for relevant
  * knowledge based on the user's message. This ensures the AI always has the most relevant
- * and up-to-date information to provide accurate and definitive answers.
+ * and up-to-date information to provide accurate answers, reducing hallucinations and ensuring
+ * it always cites sources when answering the user's queries.
  *
  * @param history - The conversation history (an array of message objects).
  * @param message - The new user message.
@@ -49,7 +42,7 @@ export const chatWithAI = async (
   }
 
   // Query Pinecone for relevant context
-  const pineconeResults = await queryRag(message, 3000);
+  const pineconeResults = await queryRag(message, 3);
   let additionalContext = "";
 
   if (pineconeResults.length > 0) {
@@ -64,25 +57,21 @@ export const chatWithAI = async (
 
   console.log("🧠 Enriching AI with Pinecone knowledge:", additionalContext);
 
-  // Refined system instruction to force definitive, data-backed, and properly cited answers
+  // Ensure system instruction is a string
   const fullSystemInstruction: string =
     systemInstruction ||
     (process.env.AI_INSTRUCTIONS as string) ||
-    "You are a data analytics expert. Answer questions definitively and accurately based solely on the context provided and historical data. " +
-      "Ensure every fact and conclusion is supported by a citation from the provided context (by including the citation IDs exactly as given). " +
-      "When predicting future values (such as future FED interest rates), clearly explain your reasoning using the historical evidence provided. " +
-      "Do not include any unsupported statements.";
+    "Answer questions based on the context provided, specifically also state how banking sector is impacted, and so on.";
 
-  // Initialize Gemini AI with refined instructions
+  // Initialize Gemini AI
   const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY);
   const model = genAI.getGenerativeModel({
     model: "gemini-1.5-flash",
     systemInstruction: fullSystemInstruction,
   });
 
-  // Adjusted generation configuration for more deterministic responses
   const generationConfig: GenerationConfig = {
-    temperature: 0.4,
+    temperature: 1,
     topP: 0.95,
     topK: 64,
     maxOutputTokens: 8192,
@@ -142,7 +131,7 @@ export const chatWithAI = async (
       parts: Array<{ text: string }>;
     }> = [];
     const userMessage =
-      "Predict the future FED interest rate based on historical data and explain the key economic events that have affected it. Please provide data-backed reasoning with citations.";
+      "What will happen to the banking sector if the Federal Reserve raises interest rates?";
     const aiResponse = await chatWithAI(conversationHistory, userMessage);
     console.log("\nChatbot Response:");
     console.log(aiResponse);

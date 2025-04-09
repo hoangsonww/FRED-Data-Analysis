@@ -11,6 +11,9 @@ dotenv.config();
  * This file sets up an Express server that listens for incoming requests,
  * handles chat interactions with an AI model,
  * and retrieves observation data from a MongoDB database.
+ *
+ * @author David Nguyen
+ * @date 2024-04-08
  */
 
 const app = express();

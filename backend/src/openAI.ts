@@ -6,6 +6,9 @@ import { queryRag } from "./queryRag";
  * @file chatWithOpenAI.ts
  * This file uses OpenAI's GPT models to generate answers enriched with Pinecone-based retrieval.
  * Implements Retrieval-Augmented Generation (RAG) and citation-based context construction.
+ *
+ * @author David Nguyen
+ * @date 2024-04-08
  */
 
 dotenv.config();
@@ -75,7 +78,7 @@ export const chatWithOpenAI = async (
       content: string;
     }> = [];
     const userMessage =
-      "How did TOTALSL change after the COVID-19 pandemic started?";
+      "What will happen to the banking sector if the Federal Reserve raises interest rates?";
     const aiResponse = await chatWithOpenAI(conversationHistory, userMessage);
     console.log("\nOpenAI Chatbot Response:");
     console.log(aiResponse);

@@ -6,6 +6,9 @@ import { queryRag } from "./queryRag";
  * @file chatWithClaude.ts
  * This file interacts with Anthropic's Claude AI using the same RAG approach.
  * It queries Pinecone for relevant context, appends citations, and generates a response via Claude.
+ *
+ * @author David Nguyen
+ * @date 2024-04-08
  */
 
 dotenv.config();
@@ -78,7 +81,7 @@ export const chatWithClaude = async (
       content: string;
     }> = [];
     const userMessage =
-      "How did monetary policy impact MPRIME from 2020 to 2024?";
+      "What will happen to the banking sector if the Federal Reserve raises interest rates?";
     const aiResponse = await chatWithClaude(conversationHistory, userMessage);
     console.log("\nClaude Chatbot Response:");
     console.log(aiResponse);

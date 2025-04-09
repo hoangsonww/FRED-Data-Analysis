@@ -34,6 +34,9 @@ export interface FredObservation {
  *   - TOTALSA: Total Assets of Commercial Banks
  *   - MPRIME: Bank Prime Loan Rate
  *   - FEDFUNDS: Effective Federal Funds Rate
+ *
+ * @author David Nguyen
+ * @date 2024-04-08
  */
 
 /**
@@ -224,7 +227,10 @@ async function generateLinearChart(
         y: { title: { display: true, text: "Value" } },
       },
       plugins: {
-        title: { display: true, text: `Linear Regression Analysis for ${seriesId}` },
+        title: {
+          display: true,
+          text: `Linear Regression Analysis for ${seriesId}`,
+        },
       },
     },
   };
@@ -247,7 +253,9 @@ async function generatePolynomialChart(
   const labels = data.map((d) => d.date.toISOString().split("T")[0]);
   const originalValues = data.map((d) => d.value);
   // Map the regression prediction points to the original data timeline.
-  const regressionValues = polyResult.predictions.map((pt: [number, number]) => pt[1]);
+  const regressionValues = polyResult.predictions.map(
+    (pt: [number, number]) => pt[1],
+  );
 
   const width = 800,
     height = 600;
@@ -277,7 +285,10 @@ async function generatePolynomialChart(
         y: { title: { display: true, text: "Value" } },
       },
       plugins: {
-        title: { display: true, text: `${polyResult.model} Analysis for ${seriesId}` },
+        title: {
+          display: true,
+          text: `${polyResult.model} Analysis for ${seriesId}`,
+        },
       },
     },
   };
@@ -382,9 +393,17 @@ async function analyzeAndSummarizeSeries(seriesId: string): Promise<string> {
   // Regression on percent change data
   const percentResult = performPercentChangeRegression(rawData);
   // Generate chart for raw data with linear regression overlay
-  const linearChartPath = await generateLinearChart(seriesId, rawData, linResult);
+  const linearChartPath = await generateLinearChart(
+    seriesId,
+    rawData,
+    linResult,
+  );
   // Generate charts for polynomial regressions
-  const polyChartPaths = await generateMultiRegressionCharts(seriesId, rawData, polyResults);
+  const polyChartPaths = await generateMultiRegressionCharts(
+    seriesId,
+    rawData,
+    polyResults,
+  );
 
   // Build a detailed prompt for AI summarization
   let prompt = `=== Detailed Analysis for FRED Series: ${seriesId} ===\n`;

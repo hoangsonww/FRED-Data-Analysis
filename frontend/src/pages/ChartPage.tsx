@@ -53,6 +53,13 @@ const seriesExplanations: { [key: string]: string } = {
     "FEDFUNDS is the Federal Funds Rate, the rate at which banks lend reserve balances to each other overnight. It is a key indicator of U.S. monetary policy.",
 };
 
+/**
+ * ChartPage component to display a line chart with regression analysis.
+ * It fetches observation data from the backend and allows users to select different series for visualization.
+ *
+ * @author David Nguyen
+ * @date 2024-04-08
+ */
 const ChartPage: React.FC = () => {
   const [observations, setObservations] = useState<Observation[]>([]);
   const [loading, setLoading] = useState(true);

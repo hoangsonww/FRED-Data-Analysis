@@ -51,6 +51,12 @@ const linkifyText = (text: string): string => {
   return text;
 };
 
+/**
+ * ChatPage component for displaying chat messages and handling user input.
+ *
+ * @author David Nguyen
+ * @date 2024-04-08
+ */
 const ChatPage: React.FC = () => {
   const [input, setInput] = useState("");
   const [chatHistory, setChatHistory] = useState<Message[]>([]);

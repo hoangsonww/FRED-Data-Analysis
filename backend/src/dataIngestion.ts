@@ -21,6 +21,9 @@ export interface FredObservation {
  * and then store it in MongoDB. It includes functions to remove invalid observations,
  * normalize data, remove outliers, apply moving averages, and filter by date range.
  * Can be a sample ETL pipeline that can easily be expanded upon in the future as needed.
+ *
+ * @author David Nguyen
+ * @date 2024-04-08
  */
 
 /**
@@ -247,3 +250,7 @@ export async function storeFredData(seriesId: string) {
 
 // Example usage: With TOTALSL as the series ID - change as needed
 storeFredData("TOTALSL");
+storeFredData("MPRIME");
+storeFredData("TOTALSA");
+storeFredData("FEDFUNDS");
+// storeFredData("INVALID_SERIES_ID"); // Uncomment to test error handling

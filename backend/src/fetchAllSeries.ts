@@ -1,8 +1,12 @@
 import { storeFredData } from "./dataIngestion";
 
 /**
+ * @file fetchAllSeries.ts
  * Fetches and stores data for a predefined set of banking series from FRED.
  * This function is designed to be called in a loop to process multiple series.
+ *
+ * @author David Nguyen
+ * @date 2024-04-08
  */
 export async function fetchAllBankingSeries() {
   // Array of verified banking series IDs from FRED

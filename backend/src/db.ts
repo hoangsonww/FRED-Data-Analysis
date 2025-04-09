@@ -5,6 +5,13 @@ const client = new MongoClient(MONGO_URI);
 export const db = client.db(DB_NAME);
 
 /**
+ * @file db.ts - MongoDB client configuration.
+ *
+ * @author David Nguyen
+ * @date 2024-04-08
+ */
+
+/**
  * Connect to MongoDB for the banking data ingestion pipeline.
  */
 export async function connectDB() {

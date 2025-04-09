@@ -7,6 +7,9 @@ dotenv.config();
  * @file pineconeClient.ts - Pinecone client configuration.
  * This file initializes the Pinecone client and exports the index object for use in other modules.
  * It uses the Pinecone database to store and retrieve vector embeddings.
+ *
+ * @author David Nguyen
+ * @date 2024-04-08
  */
 
 // @ts-ignore

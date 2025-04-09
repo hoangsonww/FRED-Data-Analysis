@@ -3,14 +3,17 @@ import { index } from "./pineconeClient";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import dotenv from "dotenv";
 
+dotenv.config();
+
 /**
  * @file upsertFredData.ts - Upsert FRED observation data from MongoDB to Pinecone.
- * This file contains the function to retrieve FRED observation data from MongoDB,
- * generate embeddings using Google Generative AI, and upsert them into Pinecone.
- * This is part of the data ingestion pipeline for the banking data.
+ * This file retrieves FRED observation data from MongoDB, generates or reuses embeddings
+ * using Google Generative AI, caches them to avoid re-generation, and upserts the vectors
+ * into Pinecone in manageable batches.
+ *
+ * @author David Nguyen
+ * @date 2024-04-08
  */
-
-dotenv.config();
 
 // Initialize Google Generative AI embedding model
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY || "");
@@ -24,6 +27,7 @@ const MONGO_COLLECTION = "observations";
 
 /**
  * Upsert FRED observation data from MongoDB to Pinecone.
+ * If an observation already includes a cached embedding, it reuses it.
  */
 export async function upsertFredData() {
   // Connect to MongoDB
@@ -47,49 +51,67 @@ export async function upsertFredData() {
     };
   }> = [];
 
-  // Process each observation document to generate its embedding vector
+  // Process each observation document
   for (const doc of observations) {
-    // Construct a textual representation of the observation.
-    // Example: "FRED series TOTALSL observation on 2020-01-01 had value 2354.8443."
+    // Construct a textual representation.
     const text = `FRED series ${doc.seriesId} observation on ${doc.date.toISOString()} had value ${doc.value}.`;
 
-    try {
-      console.log(`Generating embedding for: "${text}"`);
-      const embeddingResponse = await model.embedContent(text);
-      const embedding = embeddingResponse.embedding.values;
+    let embedding: number[] | undefined = doc.embedding;
 
-      if (!embedding || !Array.isArray(embedding)) {
-        throw new Error("Invalid embedding response format.");
+    // If embedding already exists (cached), reuse it; otherwise, generate and cache it.
+    if (!embedding) {
+      try {
+        console.log(`Generating embedding for: "${text}"`);
+        const embeddingResponse = await model.embedContent(text);
+        embedding = embeddingResponse.embedding.values;
+
+        if (!embedding || !Array.isArray(embedding)) {
+          throw new Error("Invalid embedding response format.");
+        }
+
+        // Update the document in MongoDB with the new embedding to cache it for future runs.
+        await collection.updateOne({ _id: doc._id }, { $set: { embedding } });
+      } catch (error) {
+        console.error(`Error processing document ${doc._id}:`, error);
+        continue;
       }
+    } else {
+      console.log(`Using cached embedding for: "${text}"`);
+    }
 
-      // Create a unique vector ID (for example, combining seriesId and date)
-      const vectorId = `${doc.seriesId}_${doc.date.toISOString().split("T")[0]}`;
+    // Create a unique vector ID (combine seriesId and date)
+    const vectorId = `${doc.seriesId}_${new Date(doc.date).toISOString().split("T")[0]}`;
+    vectors.push({
+      id: vectorId,
+      values: embedding,
+      metadata: {
+        seriesId: doc.seriesId,
+        date: new Date(doc.date),
+        value: doc.value,
+        text,
+      },
+    });
+  }
 
-      // Push the vector and its metadata to the batch
-      vectors.push({
-        id: vectorId,
-        values: embedding,
-        metadata: {
-          seriesId: doc.seriesId,
-          date: doc.date,
-          value: doc.value,
-          text,
-        },
-      });
+  // Batch upsert to Pinecone; use a batch size to ensure the payload is below 4 MB.
+  const batchSize = 100;
+  let totalUpserted = 0;
+
+  for (let i = 0; i < vectors.length; i += batchSize) {
+    const batch = vectors.slice(i, i + batchSize);
+    try {
+      // @ts-ignore
+      await index.namespace("fred").upsert(batch);
+      totalUpserted += batch.length;
+      console.log(
+        `Upserted batch ${Math.floor(i / batchSize) + 1} (${batch.length} vectors).`,
+      );
     } catch (error) {
-      console.error(`Error processing document ${doc._id}:`, error);
+      console.error("Error upserting batch starting at index", i, error);
     }
   }
 
-  // Upsert vectors into Pinecone under a specific namespace (e.g., "fred")
-  if (vectors.length > 0) {
-    // @ts-ignore
-    await index.namespace("fred").upsert(vectors);
-    console.log(`Successfully upserted ${vectors.length} vectors to Pinecone.`);
-  } else {
-    console.log("No vectors to upsert.");
-  }
-
+  console.log(`Successfully upserted ${totalUpserted} vectors to Pinecone.`);
   await client.close();
 }
 

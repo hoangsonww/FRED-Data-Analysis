@@ -26,6 +26,12 @@ const theme = createTheme({
   },
 });
 
+/**
+ * Function to render the main application component.
+ *
+ * @author David Nguyen
+ * @date 2024-04-08
+ */
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
