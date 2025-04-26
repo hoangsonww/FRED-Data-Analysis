@@ -26,21 +26,74 @@ This project is divided into two main parts:
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Material UI](https://img.shields.io/badge/MUI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![Pinecone](https://img.shields.io/badge/Pinecone-5D3FD3?style=for-the-badge&logo=pinecone&logoColor=white)
+![Pinecone](https://img.shields.io/badge/Pinecone-5D3FD3?style=for-the-badge&logo=opencontainersinitiative&logoColor=white)
 ![Google AI](https://img.shields.io/badge/Google%20AI-4285F4?style=for-the-badge&logo=google&logoColor=white)
 ![OpenAI](https://img.shields.io/badge/OpenAI-000000?style=for-the-badge&logo=openai&logoColor=white)
 ![Claude AI](https://img.shields.io/badge/Claude%20AI-FF6F00?style=for-the-badge&logo=anthropic&logoColor=white)
-![Azure AI](https://img.shields.io/badge/Azure%20AI-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
-![FRED API](https://img.shields.io/badge/FRED%20API-003366?style=for-the-badge&logo=federalreserve&logoColor=white)
+![Azure AI](https://img.shields.io/badge/Azure%20AI-0078D4?style=for-the-badge&logo=micropython&logoColor=white)
+![FRED API](https://img.shields.io/badge/FRED%20API-003366?style=for-the-badge&logo=openmediavault&logoColor=white)
 ![Simple Statistics](https://img.shields.io/badge/simple--statistics-FF6F00?style=for-the-badge&logo=apachespark&logoColor=white)
-![ML Regression](https://img.shields.io/badge/ml--regression-00599C?style=for-the-badge&logo=chartdotjs&logoColor=white)
+![ML Regression](https://img.shields.io/badge/ml--regression-00599C?style=for-the-badge&logo=soundcharts&logoColor=white)
 ![Data Analysis](https://img.shields.io/badge/Data%20Analysis-6E6E6E?style=for-the-badge&logo=databricks&logoColor=white)
+![Recharts](https://img.shields.io/badge/Recharts-FF6F00?style=for-the-badge&logo=chartdotjs&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Swagger](https://img.shields.io/badge/Swagger-g?style=for-the-badge&logo=swagger&logoColor=white)
+
+> **Motivation**: As a Computer Science & Economics double-major, I wanted to combine my interests in both fields and create a project that showcases my skills in full-stack development, data analysis, and machine learning, as well as in economics topics such as inflation, unemployment, and GDP growth. This project serves as a comprehensive portfolio piece that demonstrates my ability to work with real-world data and build a full-stack application from scratch.
 
 ---
 
 # 1. The Full-Stack Application
 
-## Setup Instructions
+## Table of Contents
+
+1. [Live Deployment](#live-deployment)
+2. [Technical Specifications](#technical-specifications)
+3. [Local Setup Instructions](#local-setup-instructions)
+4. [Instructions / Commands](#instructions--commands)
+   - [To Run the Data Fetching & Vectorization Functionality](#to-run-the-data-fetching--vectorization-functionality)
+   - [To Upsert Data to Pinecone](#to-upsert-data-to-pinecone)
+   - [To Run the Query Pinecone Functionality](#to-run-the-query-pinecone-functionality)
+   - [To Run the Chatbot Functionality](#to-run-the-chatbot-functionality)
+   - [To Analyze FRED Data with Regressions and Plots](#to-analyze-fred-data-with-regressions-and-plots)
+   - [To Run the Backend Express API Server](#to-run-the-backend-express-api-server)
+   - [To Run the Frontend React Application](#to-run-the-frontend-react-application)
+5. [User Interface](#user-interface)
+   - [Chat Page](#chat-page)
+   - [Charts (Visualizations) Page](#charts-visualizations-page)
+6. [Remarks](#remarks)
+
+## Live Deployment
+
+The frontend application is deployed on Vercel and can be accessed at the following link: [https://fred-data-analysis.vercel.app/](https://fred-data-analysis.vercel.app/).
+
+The backend API is deployed on Vercel as well and can be accessed at the following link: [https://fred-data-analysis-backend.vercel.app/](https://fred-data-analysis-backend.vercel.app/).
+
+Feel free to explore the application and test the chatbot functionality, as well as view the interactive charts generated from the analysis.
+
+> Note: When visiting the backend API link, it will automatically direct you to the Swagger UI, where you can test the API endpoints and view the documentation.
+
+## Technical Specifications
+
+Below are the technical specifications of the application:
+
+- **Backend**: TypeScript, Node.js, Express
+- **Frontend**: TypeScript, React, Material UI
+- **Database**: MongoDB
+- **Vector Database**: Pinecone
+- **AI Models**: Google AI, OpenAI, Claude AI, Azure OpenAI
+- **Data Analysis**: Simple Statistics, ML Regression
+- **Data Visualization**: Recharts
+- **Deployment**: Vercel
+
+**Retrieval-Augmented Generation (RAG)**: A key technology of our chatbot - here is a brief overview of how it works and enhances the chatbot's functionality:
+
+1. Data is fetched from the FRED API and stored in MongoDB.
+2. Data is vectorized using Google's text embedding model, and then upserted to Pinecone.
+3. The chatbot queries the vectorized data from Pinecone and uses RAG to provide answers. This allows the chatbot to provide more accurate and relevant answers based on the context of the conversation, while also reducing hallucinations and inaccuracies.
+4. The chatbot can be accessed via the frontend React application, where users can ask questions about the FRED data and receive answers in real-time. Alternatively, users can also use the backend API to interact with the chatbot and query the data directly.
+
+## Local Setup Instructions
 
 ### Prerequisites
 
@@ -98,7 +151,7 @@ To run the application correctly, be sure that you run these commands in order t
 3. **Chatbot:** This script allow you to ask questions about the FRED data using the vectorized data from Pinecone.
    - The chatbot will use queried data from Pinecone to provide RAG-enhanced answers.
 4. **Express API:** This script will start the Express server and allow you to interact with the backend API. (Run if you want to use the frontend React application)
-   - The API endpoints are defined in the `src/server.ts` file. 
+   - The API endpoints are defined in the `src/server.ts` file.
 5. **Frontend:** This script will start the React application and allow you to interact with the backend API in a more user-friendly manner.
 
 For more details on what specific commands to run, refer to the detailed guide below.
@@ -199,7 +252,9 @@ npm start
 
 This will start the React application on `http://localhost:3000` (or another port if 3000 is in use).
 
-Here is how the frontend UI looks like:
+## User Interface
+
+### Chat Page
 
 <p align="center">
   <img src="frontend/public/frontend.png" alt="Frontend UI" width="100%"/>
@@ -207,7 +262,17 @@ Here is how the frontend UI looks like:
 
 It will allow you to chat with the AI and ask questions about the FRED data. The chatbot will use the vectorized data from Pinecone to provide answers.
 
-Additionally, it will also allow you to view the regression plots generated from the analysis in a more interactive and user-friendly manner via `Chart.js`.
+### Charts (Visualizations) Page
+
+<p align="center">
+  <img src="frontend/public/frontend_charts.png" alt="Frontend UI" width="100%"/>
+</p>
+
+This will allow you to view the regression plots generated from the analysis in a more interactive and user-friendly manner via the `recharts` library.
+
+## Remarks
+
+This application serves as an interactive interface for users to explore the FRED data and ask questions about it. The chatbot functionality is powered by RAG, which allows it to provide more accurate and relevant answers based on the context of the conversation.
 
 ---
 
@@ -915,10 +980,10 @@ For each series, we performed multiple regression analyses—including linear re
 - **Market Volatility:**  
   The weak performance of models for DGS10 and VIXCLS suggests that these series are influenced by complex factors beyond simple linear relationships, necessitating more sophisticated modeling techniques.
 
-- **Investment Strategies:**   
+- **Investment Strategies:**  
   The strong linear trend in SP500 indicates a favorable investment climate, while the weak performance of VIXCLS models suggests that volatility may not be easily predictable.
 
-- **Consumer Behavior Insights:**   
+- **Consumer Behavior Insights:**  
   The CPIAUCSL and UNRATE models indicate that consumer price changes and unemployment rates are not easily predictable, which may affect consumer spending and investment decisions.
 
 - **Housing Market Dynamics:**  
@@ -958,4 +1023,33 @@ This analysis provides a foundational understanding of key U.S. banking and econ
 
 ---
 
-Thank you for reviewing this report. For any questions or further analysis, please feel free to reach out.
+## Author
+
+This project was developed by: **[Son (David) Nguyen](https://sonnguyenhoang.com)**
+
+- Currently a Software Engineer and Computer Science student at the University of North Carolina at Chapel Hill.
+- [LinkedIn](https://www.linkedin.com/in/hoangsonw/)
+- [GitHub](https://github.com/hoangsonww)
+- [Portfolio](https://sonnguyenhoang.com)
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+Contributions are welcome! Please clone the repository, make your changes, and submit a pull request. I will review and merge your changes.
+
+## Acknowledgments
+
+Here are some acknowledgments for the tools and resources used in this project:
+
+- The [FRED API](https://fred.stlouisfed.org/) for providing the economic data.
+- [Google Gemini AI](https://ai.google/) for generating natural language summaries.
+- The open-source community for the libraries and frameworks used in this project, including [Express](https://expressjs.com/), [React](https://reactjs.org/), [Pinecone](https://www.pinecone.io/), and [Recharts](https://recharts.org/en-US/).
+
+---
+
+Thank you for reviewing this report. For any questions or further analysis, please feel free to reach out to me.
+
+[🔝 Back to Top](#fred-data-analysis-project---a-comprehensive-analysis-of-the-us-economy)

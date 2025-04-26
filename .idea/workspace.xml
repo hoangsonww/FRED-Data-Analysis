@@ -4,7 +4,98 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e8dda9a-de4a-4d85-ad28-4e7315472793" name="Changes" comment="final: enhanced with comprehensive data sources" />
+    <list default="true" id="5e8dda9a-de4a-4d85-ad28-4e7315472793" name="Changes" comment="final: enhanced with comprehensive data sources">
+      <change afterPath="$PROJECT_DIR$/backend/public/android-chrome-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/public/android-chrome-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/public/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/public/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/public/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/public/site.webmanifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/public/android-chrome-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/public/android-chrome-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/public/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/public/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/public/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/public/site.webmanifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/vercel.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/android-chrome-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/android-chrome-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/frontend_charts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/site.webmanifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/LandingPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/CPIAUCSL_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_linear_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/CPIAUCSL_linear_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_log_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/CPIAUCSL_log_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_10_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_1_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_1_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_2_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_2_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_3_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_3_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_4_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_4_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_5_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_5_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_6_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_6_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_7_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_7_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_8_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_8_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_9_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_9_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/DGS10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DGS10_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/DGS10_linear_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DGS10_linear_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/DGS10_log_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DGS10_log_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DGS10_poly_order_10_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_1_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DGS10_poly_order_1_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_2_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DGS10_poly_order_2_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_3_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DGS10_poly_order_3_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_4_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DGS10_poly_order_4_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_5_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DGS10_poly_order_5_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_6_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DGS10_poly_order_6_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_7_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DGS10_poly_order_7_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_8_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DGS10_poly_order_8_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_9_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/DGS10_poly_order_9_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/SP500_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/SP500_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/SP500_linear_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/SP500_linear_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/SP500_log_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/SP500_log_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/SP500_poly_order_10_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_1_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/SP500_poly_order_1_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_2_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/SP500_poly_order_2_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_3_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/SP500_poly_order_3_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_4_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/SP500_poly_order_4_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_5_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/SP500_poly_order_5_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_6_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/SP500_poly_order_6_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_7_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/SP500_poly_order_7_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_8_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/SP500_poly_order_8_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_9_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/SP500_poly_order_9_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/VIXCLS_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_linear_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/VIXCLS_linear_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_log_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/VIXCLS_log_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/VIXCLS_poly_order_10_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_1_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/VIXCLS_poly_order_1_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_2_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/VIXCLS_poly_order_2_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_3_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/VIXCLS_poly_order_3_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_4_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/VIXCLS_poly_order_4_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_5_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/VIXCLS_poly_order_5_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_6_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/VIXCLS_poly_order_6_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_7_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/VIXCLS_poly_order_7_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_8_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/VIXCLS_poly_order_8_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_9_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/VIXCLS_poly_order_9_analysis.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/chatWithAI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/chatWithAI.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/frontend.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/frontend.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ChartPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ChartPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ChatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ChatPage.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,8 +132,8 @@
     "Node.js.polyRegressions.ts.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/davidnguyen/WebstormProjects/banking-predictor/frontend",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/davidnguyen/WebstormProjects/banking-predictor/backend/src",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -50,6 +141,8 @@
     "nodejs_package_manager_path": "npm",
     "npm.analyze.executor": "Run",
     "npm.chat.executor": "Run",
+    "npm.claudeAI.executor": "Run",
+    "npm.dev.executor": "Run",
     "npm.format.executor": "Run",
     "npm.polyRegression.executor": "Run",
     "npm.server.executor": "Run",
@@ -71,12 +164,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/src" />
       <recent name="$PROJECT_DIR$/frontend" />
       <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/public" />
+      <recent name="$PROJECT_DIR$/backend/public" />
+    </key>
   </component>
-  <component name="RunManager" selected="npm.polyRegression">
+  <component name="RunManager" selected="npm.start">
     <configuration name="analyze" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/backend/package.json" />
       <command value="run" />
@@ -97,21 +195,21 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="polyRegression" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="claudeAI" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/backend/package.json" />
       <command value="run" />
       <scripts>
-        <script value="polyRegression" />
+        <script value="claudeAI" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="server" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/backend/package.json" />
       <command value="run" />
       <scripts>
-        <script value="server" />
+        <script value="dev" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -129,18 +227,18 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.polyRegression" />
         <item itemvalue="npm.start" />
-        <item itemvalue="npm.server" />
-        <item itemvalue="npm.analyze" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.claudeAI" />
         <item itemvalue="npm.chat" />
+        <item itemvalue="npm.analyze" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
       </set>
     </attachedChunks>
   </component>
@@ -161,6 +259,13 @@
       <workItem from="1743798207682" duration="4000" />
       <workItem from="1743990641223" duration="2298000" />
       <workItem from="1744163454289" duration="11691000" />
+      <workItem from="1744223745232" duration="469000" />
+      <workItem from="1744257959867" duration="28000" />
+      <workItem from="1744331623895" duration="3962000" />
+      <workItem from="1744651652310" duration="1322000" />
+      <workItem from="1745628537390" duration="74000" />
+      <workItem from="1745628728231" duration="5000" />
+      <workItem from="1745629233525" duration="15491000" />
     </task>
     <task id="LOCAL-00001" summary="final: data analytics done">
       <option name="closed" value="true" />
@@ -306,7 +411,31 @@
       <option name="project" value="LOCAL" />
       <updated>1744175660999</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="final: enhanced with comprehensive data sources">
+      <option name="closed" value="true" />
+      <created>1744224066244</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1744224066244</updated>
+    </task>
+    <task id="LOCAL-00020" summary="final: enhanced with comprehensive data sources">
+      <option name="closed" value="true" />
+      <created>1744224079392</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1744224079392</updated>
+    </task>
+    <task id="LOCAL-00021" summary="final: enhanced with comprehensive data sources">
+      <option name="closed" value="true" />
+      <created>1744224209065</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1744224209065</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

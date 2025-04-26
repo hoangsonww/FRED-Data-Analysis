@@ -73,12 +73,14 @@ export const chatWithAI = async (
       "Your response must integrate the provided citation context alongside your verified historical data, " +
       "and must clearly state exact predictions and the specific economic events (such as recessions, inflation spikes, " +
       "shifts in employment, and clear changes in Fed policy) that drive changes in the FED funds rate. " +
+      "Your answer must be data-backed and include citations from the provided context. However, " +
+      "do not include too much data or too many citations; focus on the most relevant and impactful information. " +
       "Do not mention any gaps, incomplete data, or the need for additional datasets. Every conclusion must be stated as 100% definitive.";
 
   // Initialize Gemini AI with refined instructions
   const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY);
   const model = genAI.getGenerativeModel({
-    model: "gemini-1.5-flash",
+    model: "gemini-2.0-flash-lite",
     systemInstruction: fullSystemInstruction,
   });
 

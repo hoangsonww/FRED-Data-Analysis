@@ -71,13 +71,15 @@ export async function fetchFredData(
     );
   }
   const observations = response.data.observations;
-  return observations
-    .map((obs: any) => ({
-      date: obs.date,
-      value: parseFloat(obs.value),
-    }))
-    // @ts-ignore
-    .filter((observation) => !isNaN(observation.value));
+  return (
+    observations
+      .map((obs: any) => ({
+        date: obs.date,
+        value: parseFloat(obs.value),
+      }))
+      // @ts-ignore
+      .filter((observation) => !isNaN(observation.value))
+  );
 }
 
 /**
@@ -212,7 +214,8 @@ async function generateLinearChart(
         (d.date.getTime() - baseTime) / (1000 * 60 * 60 * 24),
       )[1],
   );
-  const width = 800, height = 600;
+  const width = 800,
+    height = 600;
   const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height });
   const config = {
     type: "line" as const,
@@ -267,7 +270,8 @@ async function generatePolynomialChart(
   const regressionValues = polyResult.predictions.map(
     (pt: [number, number]) => pt[1],
   );
-  const width = 800, height = 600;
+  const width = 800,
+    height = 600;
   const chartJSNodeCanvas = new ChartJSNodeCanvas({ width, height });
   const config = {
     type: "line" as const,
@@ -402,9 +406,17 @@ async function analyzeAndSummarizeSeries(seriesId: string): Promise<string> {
   // Regression on percent change data
   const percentResult = performPercentChangeRegression(rawData);
   // Generate chart for raw data with linear regression overlay
-  const linearChartPath = await generateLinearChart(seriesId, rawData, linResult);
+  const linearChartPath = await generateLinearChart(
+    seriesId,
+    rawData,
+    linResult,
+  );
   // Generate charts for polynomial regressions
-  const polyChartPaths = await generateMultiRegressionCharts(seriesId, rawData, polyResults);
+  const polyChartPaths = await generateMultiRegressionCharts(
+    seriesId,
+    rawData,
+    polyResults,
+  );
 
   // Build a detailed prompt for AI summarization
   let prompt = `=== Detailed Analysis for FRED Series: ${seriesId} ===\n`;
@@ -441,20 +453,20 @@ async function analyzeAndSummarizeSeries(seriesId: string): Promise<string> {
  */
 async function main() {
   const seriesIds: string[] = [
-    "TOTALSL",   // Total Loans and Leases at Commercial Banks (Banking)
-    "TOTALSA",   // Total Assets of Commercial Banks (Banking)
-    "MPRIME",    // Bank Prime Loan Rate (Banking)
-    "FEDFUNDS",  // Effective Federal Funds Rate (Monetary Policy)
-    "INDPRO",    // Industrial Production Index (Manufacturing/Industry)
-    "CPIAUCSL",  // Consumer Price Index (Prices)
-    "UNRATE",    // Unemployment Rate (Labor Market)
-    "GDP",       // Gross Domestic Product (Overall Economy)
-    "PPIACO",    // Producer Price Index: All Commodities (Prices)
-    "HOUST",     // Housing Starts: Total (Housing)
-    "M2SL",      // M2 Money Stock (Financial)
-    "DGS10",     // 10-Year Treasury Constant Maturity Rate (Bond Markets)
-    "SP500",     // S&P 500 Index (Stock Market)
-    "VIXCLS",    // CBOE Volatility Index (Market Volatility)
+    "TOTALSL", // Total Loans and Leases at Commercial Banks (Banking)
+    "TOTALSA", // Total Assets of Commercial Banks (Banking)
+    "MPRIME", // Bank Prime Loan Rate (Banking)
+    "FEDFUNDS", // Effective Federal Funds Rate (Monetary Policy)
+    "INDPRO", // Industrial Production Index (Manufacturing/Industry)
+    "CPIAUCSL", // Consumer Price Index (Prices)
+    "UNRATE", // Unemployment Rate (Labor Market)
+    "GDP", // Gross Domestic Product (Overall Economy)
+    "PPIACO", // Producer Price Index: All Commodities (Prices)
+    "HOUST", // Housing Starts: Total (Housing)
+    "M2SL", // M2 Money Stock (Financial)
+    "DGS10", // 10-Year Treasury Constant Maturity Rate (Bond Markets)
+    "SP500", // S&P 500 Index (Stock Market)
+    "VIXCLS", // CBOE Volatility Index (Market Volatility)
   ];
 
   // First, fetch and store raw data for all series.
