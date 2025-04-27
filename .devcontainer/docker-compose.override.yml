@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  backend:
+    # mount your repo into /workspace/backend
+    volumes:
+      - ../backend:/workspace/backend:cached
+    working_dir: /workspace/backend
+    # run TS in watch mode
+    command: npm install && npm run dev
+    ports:
+      - '4000:4000'
+
+  frontend:
+    volumes:
+      - ../frontend:/workspace/frontend:cached
+    working_dir: /workspace/frontend
+    command: npm install && npm start
+    ports:
+      - '3000:3000'

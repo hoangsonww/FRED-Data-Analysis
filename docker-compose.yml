@@ -1,0 +1,45 @@
+version: '3.8'
+
+# point to top-level .env automatically
+# (docker-compose will load .env in same folder)
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file:
+      - ./.env
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      # you can override or add more here if needed
+    ports:
+      - '4000:4000'
+    depends_on:
+      - mongodb
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    env_file:
+      - ./.env
+    environment:
+      NODE_ENV: production
+    ports:
+      - '3000:80'
+
+  mongodb:
+    image: mongo:6.0
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+    env_file:
+      - ./.env
+    environment:
+       MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+
+volumes:
+  mongo-data:

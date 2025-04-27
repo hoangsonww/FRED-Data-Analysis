@@ -37,6 +37,8 @@ This project is divided into two main parts:
 ![Data Analysis](https://img.shields.io/badge/Data%20Analysis-6E6E6E?style=for-the-badge&logo=databricks&logoColor=white)
 ![Recharts](https://img.shields.io/badge/Recharts-FF6F00?style=for-the-badge&logo=chartdotjs&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Shell](https://img.shields.io/badge/Shell-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
 ![Swagger](https://img.shields.io/badge/Swagger-g?style=for-the-badge&logo=swagger&logoColor=white)
 
 > **Motivation**: As a Computer Science & Economics double-major, I wanted to combine my interests in both fields and create a project that showcases my skills in full-stack development, data analysis, and machine learning, as well as in economics topics such as inflation, unemployment, and GDP growth. This project serves as a comprehensive portfolio piece that demonstrates my ability to work with real-world data and build a full-stack application from scratch.
@@ -95,6 +97,13 @@ Below are the technical specifications of the application:
 
 ## Local Setup Instructions
 
+### Clone the repository
+
+```bash
+git clone https://github.com/hoangsonww/FRED-Data-Analysis.git
+cd FRED-Data-Analysis
+```
+
 ### Prerequisites
 
 - Node.js (v18 or later)
@@ -111,6 +120,7 @@ Below are the technical specifications of the application:
 - Azure OpenAI API key (optional, for chatbot functionality)
 - Azure OpenAI endpoint (optional, for chatbot functionality)
 - Azure OpenAI deployment ID (optional, for chatbot functionality)
+- Docker (optional, for running the application in a container)
 
 ### `.env` File
 
@@ -355,15 +365,15 @@ For each series, we performed multiple regression analyses—including linear re
 **Chart:**
 
 <p align="center">
-  <img src="backend/TOTALSL_analysis.png" alt="TOTALSL Analysis" width="100%"/>
+  <img src="backend/analyses/TOTALSL_analysis.png" alt="TOTALSL Analysis" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="backend/TOTALSL_poly_order_2_analysis.png" alt="TOTALSL Polynomial Order 2 Analysis" width="100%"/>
+  <img src="backend/analyses/TOTALSL_poly_order_2_analysis.png" alt="TOTALSL Polynomial Order 2 Analysis" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="backend/TOTALSL_log_analysis.png" alt="TOTALSL Log Analysis" width="100%"/>
+  <img src="backend/analyses/TOTALSL_log_analysis.png" alt="TOTALSL Log Analysis" width="100%"/>
 </p>
 
 **AI Refined Summary Highlights:**
@@ -404,11 +414,11 @@ For each series, we performed multiple regression analyses—including linear re
 **Chart:**
 
 <p align="center">
-  <img src="backend/TOTALSA_analysis.png" alt="TOTALSA Analysis" width="100%"/>
+  <img src="backend/analyses/TOTALSA_analysis.png" alt="TOTALSA Analysis" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="backend/TOTALSA_log_analysis.png" alt="TOTALSA Log Analysis" width="100%"/>
+  <img src="backend/analyses/TOTALSA_log_analysis.png" alt="TOTALSA Log Analysis" width="100%"/>
 </p>
 
 **AI Refined Summary Highlights:**
@@ -449,11 +459,11 @@ For each series, we performed multiple regression analyses—including linear re
 **Chart:**
 
 <p align="center">
-  <img src="backend/MPRIME_analysis.png" alt="MPRIME Analysis" width="100%"/>
+  <img src="backend/analyses/MPRIME_analysis.png" alt="MPRIME Analysis" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="backend/MPRIME_log_analysis.png" alt="MPRIME Log Analysis" width="100%"/>
+  <img src="backend/analyses/MPRIME_log_analysis.png" alt="MPRIME Log Analysis" width="100%"/>
 </p>
 
 **AI Refined Summary Highlights:**
@@ -494,11 +504,11 @@ For each series, we performed multiple regression analyses—including linear re
 **Chart:**
 
 <p align="center">
-  <img src="backend/FEDFUNDS_analysis.png" alt="FEDFUNDS Analysis" width="100%"/>
+  <img src="backend/analyses/FEDFUNDS_analysis.png" alt="FEDFUNDS Analysis" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="backend/FEDFUNDS_log_analysis.png" alt="FEDFUNDS Log Analysis" width="100%"/>
+  <img src="backend/analyses/FEDFUNDS_log_analysis.png" alt="FEDFUNDS Log Analysis" width="100%"/>
 </p>
 
 **AI Refined Summary Highlights:**
@@ -535,11 +545,11 @@ For each series, we performed multiple regression analyses—including linear re
 **Chart:**
 
 <p align="center">
-  <img src="backend/INDPRO_analysis.png" alt="INDPRO Analysis" width="100%"/>
+  <img src="backend/analyses/INDPRO_analysis.png" alt="INDPRO Analysis" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="backend/INDPRO_log_analysis.png" alt="INDPRO Log Analysis" width="100%"/>
+  <img src="backend/analyses/INDPRO_log_analysis.png" alt="INDPRO Log Analysis" width="100%"/>
 </p>
 
 **AI Refined Summary Highlights:**
@@ -578,11 +588,11 @@ For each series, we performed multiple regression analyses—including linear re
 **Chart:**
 
 <p align="center">
-  <img src="backend/CPIAUCSL_analysis.png" alt="CPIAUCSL Analysis" width="100%"/>
+  <img src="backend/analyses/CPIAUCSL_analysis.png" alt="CPIAUCSL Analysis" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="backend/CPIAUCSL_log_analysis.png" alt="CPIAUCSL Log Analysis" width="100%"/>
+  <img src="backend/analyses/CPIAUCSL_log_analysis.png" alt="CPIAUCSL Log Analysis" width="100%"/>
 </p>
 
 **AI Refined Summary Highlights:**
@@ -620,11 +630,11 @@ For each series, we performed multiple regression analyses—including linear re
 **Chart:**
 
 <p align="center">
-  <img src="backend/UNRATE_analysis.png" alt="UNRATE Analysis" width="100%"/>
+  <img src="backend/analyses/UNRATE_analysis.png" alt="UNRATE Analysis" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="backend/UNRATE_log_analysis.png" alt="UNRATE Log Analysis" width="100%"/>
+  <img src="backend/analyses/UNRATE_log_analysis.png" alt="UNRATE Log Analysis" width="100%"/>
 </p>
 
 **AI Refined Summary Highlights:**
@@ -662,11 +672,11 @@ For each series, we performed multiple regression analyses—including linear re
 **Chart:**
 
 <p align="center">
-  <img src="backend/GDP_analysis.png" alt="GDP Analysis" width="100%"/>
+  <img src="backend/analyses/GDP_analysis.png" alt="GDP Analysis" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="backend/GDP_log_analysis.png" alt="GDP Log Analysis" width="100%"/>
+  <img src="backend/analyses/GDP_log_analysis.png" alt="GDP Log Analysis" width="100%"/>
 </p>
 
 **AI Refined Summary Highlights:**
@@ -705,11 +715,11 @@ For each series, we performed multiple regression analyses—including linear re
 **Chart:**
 
 <p align="center">
-  <img src="backend/PPIACO_analysis.png" alt="PPIACO Analysis" width="100%"/>
+  <img src="backend/analyses/PPIACO_analysis.png" alt="PPIACO Analysis" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="backend/PPIACO_log_analysis.png" alt="PPIACO Log Analysis" width="100%"/>
+  <img src="backend/analyses/PPIACO_log_analysis.png" alt="PPIACO Log Analysis" width="100%"/>
 </p>
 
 **AI Refined Summary Highlights:**
@@ -747,11 +757,11 @@ For each series, we performed multiple regression analyses—including linear re
 **Chart:**
 
 <p align="center">
-  <img src="backend/HOUST_analysis.png" alt="HOUST Analysis" width="100%"/>
+  <img src="backend/analyses/HOUST_analysis.png" alt="HOUST Analysis" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="backend/HOUST_log_analysis.png" alt="HOUST Log Analysis" width="100%"/>
+  <img src="backend/analyses/HOUST_log_analysis.png" alt="HOUST Log Analysis" width="100%"/>
 </p>
 
 **AI Refined Summary Highlights:**
@@ -789,11 +799,11 @@ For each series, we performed multiple regression analyses—including linear re
 **Chart:**
 
 <p align="center">
-  <img src="backend/M2SL_analysis.png" alt="M2SL Analysis" width="100%"/>
+  <img src="backend/analyses/M2SL_analysis.png" alt="M2SL Analysis" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="backend/M2SL_log_analysis.png" alt="M2SL Log Analysis" width="100%"/>
+  <img src="backend/analyses/M2SL_log_analysis.png" alt="M2SL Log Analysis" width="100%"/>
 </p>
 
 **AI Refined Summary Highlights:**
@@ -831,11 +841,11 @@ For each series, we performed multiple regression analyses—including linear re
 **Chart:**
 
 <p align="center">
-  <img src="backend/DGS10_analysis.png" alt="DGS10 Analysis" width="100%"/>
+  <img src="backend/analyses/DGS10_analysis.png" alt="DGS10 Analysis" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="backend/DGS10_log_analysis.png" alt="DGS10 Log Analysis" width="100%"/>
+  <img src="backend/analyses/DGS10_log_analysis.png" alt="DGS10 Log Analysis" width="100%"/>
 </p>
 
 **AI Refined Summary Highlights:**
@@ -873,11 +883,11 @@ For each series, we performed multiple regression analyses—including linear re
 **Chart:**
 
 <p align="center">
-  <img src="backend/SP500_analysis.png" alt="SP500 Analysis" width="100%"/>
+  <img src="backend/analyses/SP500_analysis.png" alt="SP500 Analysis" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="backend/SP500_log_analysis.png" alt="SP500 Log Analysis" width="100%"/>
+  <img src="backend/analyses/SP500_log_analysis.png" alt="SP500 Log Analysis" width="100%"/>
 </p>
 
 **AI Refined Summary Highlights:**
@@ -928,11 +938,11 @@ For each series, we performed multiple regression analyses—including linear re
 **Chart:**
 
 <p align="center">
-  <img src="backend/VIXCLS_analysis.png" alt="VIXCLS Analysis" width="100%"/>
+  <img src="backend/analyses/VIXCLS_analysis.png" alt="VIXCLS Analysis" width="100%"/>
 </p>
 
 <p align="center">
-  <img src="backend/VIXCLS_log_analysis.png" alt="VIXCLS Log Analysis" width="100%"/>
+  <img src="backend/analyses/VIXCLS_log_analysis.png" alt="VIXCLS Log Analysis" width="100%"/>
 </p>
 
 **AI Refined Summary Highlights:**

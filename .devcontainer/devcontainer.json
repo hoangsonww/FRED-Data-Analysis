@@ -1,0 +1,40 @@
+{
+  "name": "Banking Predictor Dev",
+  // use your custom Dockerfile
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  // or, if you prefer compose, comment out the `build` block above and uncomment below:
+  // "dockerComposeFile": [
+  //   "../docker-compose.yml",
+  //   "docker-compose.override.yml"
+  // ],
+  // "service": "backend",
+
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+
+  // load all your secrets in
+  "remoteEnvFile": "../.env",
+
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "editor.formatOnSave": true
+  },
+
+  "extensions": [
+    "ms-azuretools.vscode-docker",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "ms-vscode.vscode-typescript-next"
+  ],
+
+  // once the container is up, install deps
+  "postCreateCommand": "cd backend && npm ci && cd ../frontend && npm ci",
+
+  // make both servers reachable
+  "forwardPorts": [4000, 3000],
+
+  "shutdownAction": "none"
+}

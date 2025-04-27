@@ -250,7 +250,7 @@ async function generateLinearChart(
     },
   };
   const imageBuffer = await chartJSNodeCanvas.renderToBuffer(config);
-  const imagePath = `./${seriesId}_linear_analysis.png`;
+  const imagePath = `./analyses/${seriesId}_linear_analysis.png`;
   fs.writeFileSync(imagePath, imageBuffer);
   return imagePath;
 }
@@ -306,7 +306,7 @@ async function generatePolynomialChart(
     },
   };
   const imageBuffer = await chartJSNodeCanvas.renderToBuffer(config);
-  const imagePath = `./${seriesId}_poly_order_${polyResult.order}_analysis.png`;
+  const imagePath = `./analyses/${seriesId}_poly_order_${polyResult.order}_analysis.png`;
   fs.writeFileSync(imagePath, imageBuffer);
   return imagePath;
 }
@@ -337,7 +337,7 @@ async function summarizeStatistics(prompt: string): Promise<string> {
   }
   const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY);
   const model = genAI.getGenerativeModel({
-    model: "gemini-1.5-flash",
+    model: "gemini-2.0-flash-lite",
     systemInstruction:
       "You are a data science expert. Summarize the following detailed statistical analysis results in a clear, professional manner. Comment on trends, variability, and model reliability. Also, compare the different regression analyses.",
   });
