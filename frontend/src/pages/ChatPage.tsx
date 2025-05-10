@@ -18,6 +18,9 @@ import AndroidIcon from "@mui/icons-material/Android";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import "katex/dist/katex.min.css";
 import MuiLink from "@mui/material/Link";
 
 interface Message {
@@ -67,7 +70,7 @@ const MessageBubble = styled(Box)<{ sender: "user" | "bot" }>(({
   const bgColor = isUser
     ? theme.palette.primary.main
     : theme.palette.mode === "light"
-      ? theme.palette.grey[200]
+      ? ""
       : theme.palette.grey[800];
   const color = isUser ? "#ffffff" : theme.palette.text.primary;
 
@@ -221,7 +224,8 @@ const ChatPage: React.FC = () => {
             </Avatar>
             <MessageBubble sender={msg.sender}>
               <ReactMarkdown
-                remarkPlugins={[remarkGfm]}
+                remarkPlugins={[remarkGfm, remarkMath]}
+                rehypePlugins={[rehypeKatex]}
                 components={{
                   h1: ({ children, ...props }) => (
                     <Box

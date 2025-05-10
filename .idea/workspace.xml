@@ -5,207 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e8dda9a-de4a-4d85-ad28-4e7315472793" name="Changes" comment="final: enhanced with comprehensive data sources">
-      <change afterPath="$PROJECT_DIR$/.devcontainer/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.devcontainer/devcontainer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.devcontainer/docker-compose.override.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shell/analyze.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shell/azure_ai.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shell/chat.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shell/claude_ai.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shell/openai_ai.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shell/query.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shell/run_all.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shell/start_backend.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shell/upsert.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/CPIAUCSL_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_linear_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/CPIAUCSL_linear_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_log_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/CPIAUCSL_log_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/CPIAUCSL_poly_order_10_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_1_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/CPIAUCSL_poly_order_1_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_2_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/CPIAUCSL_poly_order_2_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_3_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/CPIAUCSL_poly_order_3_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_4_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/CPIAUCSL_poly_order_4_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_5_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/CPIAUCSL_poly_order_5_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_6_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/CPIAUCSL_poly_order_6_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_7_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/CPIAUCSL_poly_order_7_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_8_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/CPIAUCSL_poly_order_8_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/CPIAUCSL_poly_order_9_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/CPIAUCSL_poly_order_9_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DGS10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/DGS10_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DGS10_linear_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/DGS10_linear_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DGS10_log_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/DGS10_log_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/DGS10_poly_order_10_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_1_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/DGS10_poly_order_1_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_2_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/DGS10_poly_order_2_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_3_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/DGS10_poly_order_3_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_4_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/DGS10_poly_order_4_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_5_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/DGS10_poly_order_5_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_6_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/DGS10_poly_order_6_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_7_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/DGS10_poly_order_7_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_8_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/DGS10_poly_order_8_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/DGS10_poly_order_9_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/DGS10_poly_order_9_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/FEDFUNDS_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/FEDFUNDS_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/FEDFUNDS_linear_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/FEDFUNDS_linear_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/FEDFUNDS_log_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/FEDFUNDS_log_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/FEDFUNDS_poly_order_10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/FEDFUNDS_poly_order_10_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/FEDFUNDS_poly_order_1_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/FEDFUNDS_poly_order_1_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/FEDFUNDS_poly_order_2_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/FEDFUNDS_poly_order_2_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/FEDFUNDS_poly_order_3_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/FEDFUNDS_poly_order_3_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/FEDFUNDS_poly_order_4_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/FEDFUNDS_poly_order_4_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/FEDFUNDS_poly_order_5_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/FEDFUNDS_poly_order_5_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/FEDFUNDS_poly_order_6_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/FEDFUNDS_poly_order_6_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/FEDFUNDS_poly_order_7_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/FEDFUNDS_poly_order_7_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/FEDFUNDS_poly_order_8_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/FEDFUNDS_poly_order_8_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/FEDFUNDS_poly_order_9_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/FEDFUNDS_poly_order_9_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/GDP_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/GDP_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/GDP_linear_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/GDP_linear_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/GDP_log_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/GDP_log_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/GDP_poly_order_10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/GDP_poly_order_10_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/GDP_poly_order_1_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/GDP_poly_order_1_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/GDP_poly_order_2_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/GDP_poly_order_2_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/GDP_poly_order_3_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/GDP_poly_order_3_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/GDP_poly_order_4_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/GDP_poly_order_4_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/GDP_poly_order_5_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/GDP_poly_order_5_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/GDP_poly_order_6_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/GDP_poly_order_6_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/GDP_poly_order_7_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/GDP_poly_order_7_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/GDP_poly_order_8_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/GDP_poly_order_8_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/GDP_poly_order_9_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/GDP_poly_order_9_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/HOUST_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/HOUST_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/HOUST_linear_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/HOUST_linear_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/HOUST_log_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/HOUST_log_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/HOUST_poly_order_10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/HOUST_poly_order_10_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/HOUST_poly_order_1_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/HOUST_poly_order_1_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/HOUST_poly_order_2_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/HOUST_poly_order_2_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/HOUST_poly_order_3_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/HOUST_poly_order_3_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/HOUST_poly_order_4_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/HOUST_poly_order_4_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/HOUST_poly_order_5_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/HOUST_poly_order_5_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/HOUST_poly_order_6_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/HOUST_poly_order_6_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/HOUST_poly_order_7_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/HOUST_poly_order_7_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/HOUST_poly_order_8_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/HOUST_poly_order_8_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/HOUST_poly_order_9_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/HOUST_poly_order_9_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/INDPRO_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/INDPRO_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/INDPRO_linear_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/INDPRO_linear_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/INDPRO_log_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/INDPRO_log_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/INDPRO_poly_order_10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/INDPRO_poly_order_10_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/INDPRO_poly_order_1_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/INDPRO_poly_order_1_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/INDPRO_poly_order_2_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/INDPRO_poly_order_2_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/INDPRO_poly_order_3_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/INDPRO_poly_order_3_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/INDPRO_poly_order_4_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/INDPRO_poly_order_4_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/INDPRO_poly_order_5_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/INDPRO_poly_order_5_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/INDPRO_poly_order_6_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/INDPRO_poly_order_6_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/INDPRO_poly_order_7_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/INDPRO_poly_order_7_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/INDPRO_poly_order_8_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/INDPRO_poly_order_8_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/INDPRO_poly_order_9_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/INDPRO_poly_order_9_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/M2SL_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/M2SL_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/M2SL_linear_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/M2SL_linear_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/M2SL_log_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/M2SL_log_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/M2SL_poly_order_10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/M2SL_poly_order_10_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/M2SL_poly_order_1_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/M2SL_poly_order_1_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/M2SL_poly_order_2_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/M2SL_poly_order_2_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/M2SL_poly_order_3_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/M2SL_poly_order_3_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/M2SL_poly_order_4_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/M2SL_poly_order_4_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/M2SL_poly_order_5_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/M2SL_poly_order_5_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/M2SL_poly_order_6_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/M2SL_poly_order_6_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/M2SL_poly_order_7_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/M2SL_poly_order_7_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/M2SL_poly_order_8_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/M2SL_poly_order_8_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/M2SL_poly_order_9_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/M2SL_poly_order_9_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/MPRIME_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/MPRIME_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/MPRIME_linear_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/MPRIME_linear_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/MPRIME_log_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/MPRIME_log_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/MPRIME_poly_order_10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/MPRIME_poly_order_10_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/MPRIME_poly_order_1_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/MPRIME_poly_order_1_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/MPRIME_poly_order_2_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/MPRIME_poly_order_2_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/MPRIME_poly_order_3_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/MPRIME_poly_order_3_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/MPRIME_poly_order_4_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/MPRIME_poly_order_4_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/MPRIME_poly_order_5_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/MPRIME_poly_order_5_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/MPRIME_poly_order_6_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/MPRIME_poly_order_6_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/MPRIME_poly_order_7_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/MPRIME_poly_order_7_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/MPRIME_poly_order_8_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/MPRIME_poly_order_8_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/MPRIME_poly_order_9_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/MPRIME_poly_order_9_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/PPIACO_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/PPIACO_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/PPIACO_linear_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/PPIACO_linear_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/PPIACO_log_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/PPIACO_log_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/PPIACO_poly_order_10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/PPIACO_poly_order_10_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/PPIACO_poly_order_1_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/PPIACO_poly_order_1_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/PPIACO_poly_order_2_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/PPIACO_poly_order_2_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/PPIACO_poly_order_3_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/PPIACO_poly_order_3_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/PPIACO_poly_order_4_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/PPIACO_poly_order_4_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/PPIACO_poly_order_5_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/PPIACO_poly_order_5_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/PPIACO_poly_order_6_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/PPIACO_poly_order_6_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/PPIACO_poly_order_7_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/PPIACO_poly_order_7_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/PPIACO_poly_order_8_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/PPIACO_poly_order_8_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/PPIACO_poly_order_9_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/PPIACO_poly_order_9_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/SP500_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/SP500_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/SP500_linear_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/SP500_linear_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/SP500_log_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/SP500_log_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/SP500_poly_order_10_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_1_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/SP500_poly_order_1_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_2_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/SP500_poly_order_2_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_3_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/SP500_poly_order_3_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_4_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/SP500_poly_order_4_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_5_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/SP500_poly_order_5_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_6_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/SP500_poly_order_6_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_7_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/SP500_poly_order_7_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_8_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/SP500_poly_order_8_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/SP500_poly_order_9_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/SP500_poly_order_9_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSA_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSA_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSA_linear_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSA_linear_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSA_log_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSA_log_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSA_poly_order_10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSA_poly_order_10_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSA_poly_order_1_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSA_poly_order_1_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSA_poly_order_2_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSA_poly_order_2_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSA_poly_order_3_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSA_poly_order_3_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSA_poly_order_4_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSA_poly_order_4_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSA_poly_order_5_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSA_poly_order_5_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSA_poly_order_6_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSA_poly_order_6_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSA_poly_order_7_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSA_poly_order_7_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSA_poly_order_8_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSA_poly_order_8_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSA_poly_order_9_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSA_poly_order_9_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSL_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSL_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSL_linear_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSL_linear_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSL_log_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSL_log_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSL_poly_order_10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSL_poly_order_10_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSL_poly_order_1_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSL_poly_order_1_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSL_poly_order_2_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSL_poly_order_2_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSL_poly_order_3_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSL_poly_order_3_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSL_poly_order_4_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSL_poly_order_4_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSL_poly_order_5_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSL_poly_order_5_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSL_poly_order_6_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSL_poly_order_6_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSL_poly_order_7_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSL_poly_order_7_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSL_poly_order_8_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSL_poly_order_8_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/TOTALSL_poly_order_9_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/TOTALSL_poly_order_9_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/UNRATE_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/UNRATE_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/UNRATE_linear_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/UNRATE_linear_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/UNRATE_log_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/UNRATE_log_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/UNRATE_poly_order_10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/UNRATE_poly_order_10_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/UNRATE_poly_order_1_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/UNRATE_poly_order_1_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/UNRATE_poly_order_2_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/UNRATE_poly_order_2_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/UNRATE_poly_order_3_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/UNRATE_poly_order_3_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/UNRATE_poly_order_4_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/UNRATE_poly_order_4_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/UNRATE_poly_order_5_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/UNRATE_poly_order_5_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/UNRATE_poly_order_6_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/UNRATE_poly_order_6_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/UNRATE_poly_order_7_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/UNRATE_poly_order_7_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/UNRATE_poly_order_8_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/UNRATE_poly_order_8_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/UNRATE_poly_order_9_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/UNRATE_poly_order_9_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/VIXCLS_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_linear_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/VIXCLS_linear_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_log_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/VIXCLS_log_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_10_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/VIXCLS_poly_order_10_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_1_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/VIXCLS_poly_order_1_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_2_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/VIXCLS_poly_order_2_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_3_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/VIXCLS_poly_order_3_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_4_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/VIXCLS_poly_order_4_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_5_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/VIXCLS_poly_order_5_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_6_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/VIXCLS_poly_order_6_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_7_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/VIXCLS_poly_order_7_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_8_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/VIXCLS_poly_order_8_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/VIXCLS_poly_order_9_analysis.png" beforeDir="false" afterPath="$PROJECT_DIR$/backend/analyses/VIXCLS_poly_order_9_analysis.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/analyzeFredData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/analyzeFredData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/polyRegressions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/polyRegressions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ChatPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ChatPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,33 +41,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Node.js.polyRegressions.ts.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHELLCHECK.PATH": "/Users/davidnguyen/Library/Application Support/JetBrains/WebStorm2024.1/plugins/Shell Script/shellcheck",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/davidnguyen/WebstormProjects/banking-predictor/backend/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.analyze.executor": "Run",
-    "npm.chat.executor": "Run",
-    "npm.claudeAI.executor": "Run",
-    "npm.dev.executor": "Run",
-    "npm.format.executor": "Run",
-    "npm.polyRegression.executor": "Run",
-    "npm.server.executor": "Run",
-    "npm.start.executor": "Run",
-    "npm.upsert.executor": "Run",
-    "settings.editor.selected.configurable": "settings.sync",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.polyRegressions.ts.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;/Users/davidnguyen/Library/Application Support/JetBrains/WebStorm2024.1/plugins/Shell Script/shellcheck&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/davidnguyen/WebstormProjects/banking-predictor/backend/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.analyze.executor&quot;: &quot;Run&quot;,
+    &quot;npm.chat.executor&quot;: &quot;Run&quot;,
+    &quot;npm.claudeAI.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.format.executor&quot;: &quot;Run&quot;,
+    &quot;npm.polyRegression.executor&quot;: &quot;Run&quot;,
+    &quot;npm.server.executor&quot;: &quot;Run&quot;,
+    &quot;npm.start.executor&quot;: &quot;Run&quot;,
+    &quot;npm.upsert.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -341,9 +144,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.polyRegression" />
         <item itemvalue="npm.analyze" />
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.claudeAI" />
       </list>
@@ -352,7 +155,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-WS-251.25410.117" />
       </set>
     </attachedChunks>
   </component>
@@ -380,7 +183,10 @@
       <workItem from="1745628537390" duration="74000" />
       <workItem from="1745628728231" duration="5000" />
       <workItem from="1745629233525" duration="15491000" />
-      <workItem from="1745769493295" duration="1524000" />
+      <workItem from="1745769493295" duration="1844000" />
+      <workItem from="1745774216038" duration="14000" />
+      <workItem from="1745776189893" duration="1000" />
+      <workItem from="1746843889722" duration="135000" />
     </task>
     <task id="LOCAL-00001" summary="final: data analytics done">
       <option name="closed" value="true" />
@@ -550,7 +356,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744224209065</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="final: enhanced with comprehensive data sources">
+      <option name="closed" value="true" />
+      <created>1745771248072</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1745771248072</updated>
+    </task>
+    <task id="LOCAL-00023" summary="final: enhanced with comprehensive data sources">
+      <option name="closed" value="true" />
+      <created>1745771291149</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1745771291149</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
