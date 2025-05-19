@@ -1,0 +1,17 @@
+/Users/davidnguyen/WebstormProjects/banking-predictor/spring/src/main/java/com/github/hoangsonww/fred/FredDataApplication.java
+/Users/davidnguyen/WebstormProjects/banking-predictor/spring/src/main/java/com/github/hoangsonww/fred/controller/AnalysisController.java
+/Users/davidnguyen/WebstormProjects/banking-predictor/spring/src/main/java/com/github/hoangsonww/fred/controller/ChatController.java
+/Users/davidnguyen/WebstormProjects/banking-predictor/spring/src/main/java/com/github/hoangsonww/fred/controller/FredController.java
+/Users/davidnguyen/WebstormProjects/banking-predictor/spring/src/main/java/com/github/hoangsonww/fred/controller/VectorController.java
+/Users/davidnguyen/WebstormProjects/banking-predictor/spring/src/main/java/com/github/hoangsonww/fred/model/AnalysisReport.java
+/Users/davidnguyen/WebstormProjects/banking-predictor/spring/src/main/java/com/github/hoangsonww/fred/model/ChatMessage.java
+/Users/davidnguyen/WebstormProjects/banking-predictor/spring/src/main/java/com/github/hoangsonww/fred/model/FredSeries.java
+/Users/davidnguyen/WebstormProjects/banking-predictor/spring/src/main/java/com/github/hoangsonww/fred/model/VectorEntry.java
+/Users/davidnguyen/WebstormProjects/banking-predictor/spring/src/main/java/com/github/hoangsonww/fred/repository/AnalysisReportRepository.java
+/Users/davidnguyen/WebstormProjects/banking-predictor/spring/src/main/java/com/github/hoangsonww/fred/repository/ChatMessageRepository.java
+/Users/davidnguyen/WebstormProjects/banking-predictor/spring/src/main/java/com/github/hoangsonww/fred/repository/FredSeriesRepository.java
+/Users/davidnguyen/WebstormProjects/banking-predictor/spring/src/main/java/com/github/hoangsonww/fred/repository/VectorEntryRepository.java
+/Users/davidnguyen/WebstormProjects/banking-predictor/spring/src/main/java/com/github/hoangsonww/fred/service/AnalysisService.java
+/Users/davidnguyen/WebstormProjects/banking-predictor/spring/src/main/java/com/github/hoangsonww/fred/service/ChatService.java
+/Users/davidnguyen/WebstormProjects/banking-predictor/spring/src/main/java/com/github/hoangsonww/fred/service/FredService.java
+/Users/davidnguyen/WebstormProjects/banking-predictor/spring/src/main/java/com/github/hoangsonww/fred/service/VectorService.java
