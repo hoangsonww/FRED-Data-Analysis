@@ -209,7 +209,7 @@ const LandingPage: React.FC = () => {
       >
         <Container sx={{ position: "relative", zIndex: 1 }} maxWidth="lg">
           <Grid container spacing={6} alignItems="center">
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Grow in={heroInView} timeout={600}>
                 <Box>
                   <Typography
@@ -319,7 +319,7 @@ const LandingPage: React.FC = () => {
                 </Box>
               </Grow>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Fade in={heroInView} timeout={900}>
                 <Paper
                   elevation={0}
@@ -398,7 +398,7 @@ const LandingPage: React.FC = () => {
                       { label: "Inflation", value: "Regime markers" },
                       { label: "Credit", value: "Liquidity pulse" },
                     ].map((item) => (
-                      <Grid item xs={12} sm={4} key={item.label}>
+                      <Grid size={{ xs: 12, sm: 4 }} key={item.label}>
                         <Box
                           sx={{
                             p: 1.4,
@@ -472,7 +472,7 @@ const LandingPage: React.FC = () => {
           </Grow>
           <Grid container spacing={3} ref={signalsRef}>
             {signalCards.map((card, index) => (
-              <Grid item xs={12} sm={6} md={3} key={card.title}>
+              <Grid size={{ xs: 12, sm: 6, md: 3 }} key={card.title}>
                 <Grow
                   in={signalsInView}
                   style={{ transitionDelay: `${index * 140}ms` }}
@@ -572,7 +572,7 @@ const LandingPage: React.FC = () => {
                   }}
                 >
                   <Grid container spacing={2} alignItems="center">
-                    <Grid item xs={12} sm="auto">
+                    <Grid size={{ xs: 12, sm: "auto" }}>
                       <Box
                         sx={{
                           width: 56,
@@ -589,7 +589,7 @@ const LandingPage: React.FC = () => {
                         {step.icon}
                       </Box>
                     </Grid>
-                    <Grid item xs={12} sm>
+                    <Grid size={{ xs: 12, sm: "grow" }}>
                       <Typography variant="h6" sx={{ fontWeight: 600 }}>
                         {step.title}
                       </Typography>
@@ -641,7 +641,7 @@ const LandingPage: React.FC = () => {
           </Grow>
           <Grid container spacing={3} ref={insightsRef}>
             {insightCards.map((card, index) => (
-              <Grid item xs={12} md={4} key={card.title}>
+              <Grid size={{ xs: 12, md: 4 }} key={card.title}>
                 <Grow
                   in={insightsInView}
                   style={{ transitionDelay: `${index * 140}ms` }}
