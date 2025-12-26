@@ -6,6 +6,7 @@ import {
 } from "@google/generative-ai";
 import dotenv from "dotenv";
 import { queryRag } from "./queryRag";
+import { withGeminiModelFallback } from "./geminiModelRouter";
 
 /**
  * @file chatWithAI.ts
@@ -79,10 +80,6 @@ export const chatWithAI = async (
 
   // Initialize Gemini AI with refined instructions
   const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY);
-  const model = genAI.getGenerativeModel({
-    model: "gemini-2.0-flash-lite",
-    systemInstruction: fullSystemInstruction,
-  });
 
   // Adjust generation configuration for deterministic responses
   const generationConfig: GenerationConfig = {
@@ -115,22 +112,34 @@ export const chatWithAI = async (
   history.push({ role: "user", parts: [{ text: message }] });
   history.push({ role: "user", parts: [{ text: additionalContext }] });
 
-  // Start chat session
-  const chatSession = model.startChat({
-    generationConfig,
-    safetySettings,
-    history,
-  });
-
-  const result = await chatSession.sendMessage(message);
-  if (!result.response || !result.response.text) {
-    throw new Error("Failed to get text response from the AI.");
-  }
-
-  const responseText =
-    typeof result.response.text === "function"
-      ? result.response.text()
-      : result.response.text;
+  const responseText = await withGeminiModelFallback(
+    async (modelName) => {
+      const model = genAI.getGenerativeModel({
+        model: modelName,
+        systemInstruction: fullSystemInstruction,
+      });
+      const chatSession = model.startChat({
+        generationConfig,
+        safetySettings,
+        history,
+      });
+      const result = await chatSession.sendMessage(message);
+      if (!result.response || !result.response.text) {
+        throw new Error("Failed to get text response from the AI.");
+      }
+      return typeof result.response.text === "function"
+        ? result.response.text()
+        : result.response.text;
+    },
+    {
+      onError: (modelName, error) => {
+        console.warn(
+          `Gemini model ${modelName} failed, trying next.`,
+          error,
+        );
+      },
+    },
+  );
 
   return responseText;
 };

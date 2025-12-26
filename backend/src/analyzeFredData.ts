@@ -16,6 +16,7 @@ import {
   FRED_END_DATE,
   MONGO_URI,
 } from "./config";
+import { withGeminiModelFallback } from "./geminiModelRouter";
 
 dotenv.config();
 
@@ -331,11 +332,6 @@ async function summarizeStatistics(prompt: string): Promise<string> {
     throw new Error("Missing GOOGLE_AI_API_KEY in environment variables");
   }
   const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY);
-  const model = genAI.getGenerativeModel({
-    model: "gemini-2.0-flash-lite",
-    systemInstruction:
-      "You are a data science expert. Summarize the following detailed statistical analysis results in a clear, professional manner. Comment on trends, variability, and model reliability. Also, compare the different regression analyses.",
-  });
   const generationConfig: GenerationConfig = {
     temperature: 0.7,
     topP: 0.95,
@@ -360,19 +356,35 @@ async function summarizeStatistics(prompt: string): Promise<string> {
       threshold: HarmBlockThreshold.BLOCK_NONE,
     },
   ];
-  const chatSession = model.startChat({
-    generationConfig,
-    safetySettings,
-    history: [{ role: "user", parts: [{ text: prompt }] }],
-  });
-  const result = await chatSession.sendMessage(prompt);
-  if (!result.response || !result.response.text) {
-    throw new Error("Failed to generate summarization from the AI.");
-  }
-  const responseText =
-    typeof result.response.text === "function"
-      ? result.response.text()
-      : result.response.text;
+  const responseText = await withGeminiModelFallback(
+    async (modelName) => {
+      const model = genAI.getGenerativeModel({
+        model: modelName,
+        systemInstruction:
+          "You are a data science expert. Summarize the following detailed statistical analysis results in a clear, professional manner. Comment on trends, variability, and model reliability. Also, compare the different regression analyses.",
+      });
+      const chatSession = model.startChat({
+        generationConfig,
+        safetySettings,
+        history: [{ role: "user", parts: [{ text: prompt }] }],
+      });
+      const result = await chatSession.sendMessage(prompt);
+      if (!result.response || !result.response.text) {
+        throw new Error("Failed to generate summarization from the AI.");
+      }
+      return typeof result.response.text === "function"
+        ? result.response.text()
+        : result.response.text;
+    },
+    {
+      onError: (modelName, error) => {
+        console.warn(
+          `Gemini model ${modelName} failed, trying next.`,
+          error,
+        );
+      },
+    },
+  );
   return responseText;
 }
 
