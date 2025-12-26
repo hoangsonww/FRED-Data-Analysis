@@ -682,7 +682,7 @@ const LandingPage: React.FC = () => {
                         color: isDark ? "#38bdf8" : "#0f172a",
                       }}
                     >
-                      Explore signals ->
+                      Explore signals {"->"}
                     </Button>
                   </Paper>
                 </Grow>

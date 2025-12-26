@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e8dda9a-de4a-4d85-ad28-4e7315472793" name="Changes" comment="final: added Gemini model router with model selection and fallback logic" />
+    <list default="true" id="5e8dda9a-de4a-4d85-ad28-4e7315472793" name="Changes" comment="final: updated workspace configuration for CI branch and task tracking" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -187,7 +187,7 @@
       <workItem from="1746910002547" duration="6000" />
       <workItem from="1747623104011" duration="450000" />
       <workItem from="1747626839490" duration="432000" />
-      <workItem from="1766723426817" duration="2260000" />
+      <workItem from="1766723426817" duration="2617000" />
     </task>
     <task id="LOCAL-00001" summary="final: data analytics done">
       <option name="closed" value="true" />
@@ -413,7 +413,23 @@
       <option name="project" value="LOCAL" />
       <updated>1766739840837</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="final: updated workspace configuration for CI branch and task tracking">
+      <option name="closed" value="true" />
+      <created>1766740332071</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1766740332071</updated>
+    </task>
+    <task id="LOCAL-00030" summary="final: updated workspace configuration for CI branch and task tracking">
+      <option name="closed" value="true" />
+      <created>1766740655945</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1766740655945</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +453,8 @@
     <MESSAGE value="final: data analytics with poly regressions" />
     <MESSAGE value="final: enhanced with comprehensive data sources" />
     <MESSAGE value="final: added Gemini model router with model selection and fallback logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="final: added Gemini model router with model selection and fallback logic" />
+    <MESSAGE value="final: updated workspace configuration for CI branch and task tracking" />
+    <option name="LAST_COMMIT_MESSAGE" value="final: updated workspace configuration for CI branch and task tracking" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="github-copilot-workspace">
