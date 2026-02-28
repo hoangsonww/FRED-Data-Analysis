@@ -192,7 +192,8 @@ const LandingPage: React.FC = () => {
             height: "55vw",
             top: "-20%",
             right: "-15%",
-            background: "radial-gradient(circle, rgba(56,189,248,0.25), transparent 65%)",
+            background:
+              "radial-gradient(circle, rgba(56,189,248,0.25), transparent 65%)",
             filter: "blur(2px)",
           },
           "&::after": {
@@ -202,7 +203,8 @@ const LandingPage: React.FC = () => {
             height: "45vw",
             bottom: "-25%",
             left: "-15%",
-            background: "radial-gradient(circle, rgba(245,158,11,0.25), transparent 65%)",
+            background:
+              "radial-gradient(circle, rgba(245,158,11,0.25), transparent 65%)",
             filter: "blur(4px)",
           },
         }}
@@ -339,9 +341,7 @@ const LandingPage: React.FC = () => {
                           textTransform: "uppercase",
                           letterSpacing: "0.2em",
                           fontSize: 12,
-                          color: isDark
-                            ? "rgba(248,241,232,0.6)"
-                            : "#5b6b75",
+                          color: isDark ? "rgba(248,241,232,0.6)" : "#5b6b75",
                         }}
                       >
                         Signal Board

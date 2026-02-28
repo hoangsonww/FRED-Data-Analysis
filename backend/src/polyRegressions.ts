@@ -383,10 +383,7 @@ async function summarizeStatistics(prompt: string): Promise<string> {
     },
     {
       onError: (modelName, error) => {
-        console.warn(
-          `Gemini model ${modelName} failed, trying next.`,
-          error,
-        );
+        console.warn(`Gemini model ${modelName} failed, trying next.`, error);
       },
     },
   );

@@ -1,6 +1,6 @@
 import { index } from "./pineconeClient";
-import { GoogleGenerativeAI } from "@google/generative-ai";
 import dotenv from "dotenv";
+import { generateGeminiEmbedding } from "./geminiEmbedding";
 
 dotenv.config();
 
@@ -13,10 +13,6 @@ dotenv.config();
  * @date 2024-04-08
  */
 
-// Initialize Google Generative AI embedding model - dimensions is 768
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY!);
-const model = genAI.getGenerativeModel({ model: "models/text-embedding-004" });
-
 /**
  * Queries the Pinecone index using an input query string.
  * Generates an embedding for the query, queries the Pinecone index in the "fred" namespace,
@@ -27,8 +23,10 @@ const model = genAI.getGenerativeModel({ model: "models/text-embedding-004" });
  */
 export async function queryRag(queryText: string, topK: number = 200) {
   console.log(`Generating embedding for query: "${queryText}"`);
-  const embeddingResponse = await model.embedContent(queryText);
-  const queryVector = embeddingResponse.embedding.values;
+  const queryVector = await generateGeminiEmbedding(
+    queryText,
+    "RETRIEVAL_QUERY",
+  );
   if (!queryVector || !Array.isArray(queryVector)) {
     throw new Error("Invalid embedding response format.");
   }

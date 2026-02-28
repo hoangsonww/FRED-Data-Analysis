@@ -120,10 +120,7 @@ export const chatWithAI = async (
     },
     {
       onError: (modelName, error) => {
-        console.warn(
-          `Gemini model ${modelName} failed, trying next.`,
-          error,
-        );
+        console.warn(`Gemini model ${modelName} failed, trying next.`, error);
       },
     },
   );
