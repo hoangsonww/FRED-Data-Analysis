@@ -1,7 +1,10 @@
 import { MongoClient } from "mongodb";
 import { index } from "./pineconeClient";
-import { GoogleGenerativeAI } from "@google/generative-ai";
 import dotenv from "dotenv";
+import {
+  GEMINI_EMBEDDING_DIMENSIONS,
+  generateGeminiEmbedding,
+} from "./geminiEmbedding";
 
 dotenv.config();
 
@@ -14,11 +17,6 @@ dotenv.config();
  * @author David Nguyen
  * @date 2024-04-08
  */
-
-// Initialize Google Generative AI embedding model
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_AI_API_KEY || "");
-// Google AI's Text Embedding Model with 768 dimensions
-const model = genAI.getGenerativeModel({ model: "models/text-embedding-004" });
 
 // MongoDB configuration
 const MONGO_URI = process.env.MONGO_URI!;
@@ -57,13 +55,20 @@ export async function upsertFredData() {
     const text = `FRED series ${doc.seriesId} observation on ${doc.date.toISOString()} had value ${doc.value}.`;
 
     let embedding: number[] | undefined = doc.embedding;
+    const hasExpectedDimensions =
+      Array.isArray(embedding) &&
+      embedding.length === GEMINI_EMBEDDING_DIMENSIONS;
 
     // If embedding already exists (cached), reuse it; otherwise, generate and cache it.
-    if (!embedding) {
+    if (!hasExpectedDimensions) {
       try {
+        if (Array.isArray(embedding)) {
+          console.log(
+            `Regenerating cached embedding with ${embedding.length} dimensions for: "${text}"`,
+          );
+        }
         console.log(`Generating embedding for: "${text}"`);
-        const embeddingResponse = await model.embedContent(text);
-        embedding = embeddingResponse.embedding.values;
+        embedding = await generateGeminiEmbedding(text, "RETRIEVAL_DOCUMENT");
 
         if (!embedding || !Array.isArray(embedding)) {
           throw new Error("Invalid embedding response format.");
@@ -83,6 +88,7 @@ export async function upsertFredData() {
     const vectorId = `${doc.seriesId}_${new Date(doc.date).toISOString().split("T")[0]}`;
     vectors.push({
       id: vectorId,
+      // @ts-ignore
       values: embedding,
       metadata: {
         seriesId: doc.seriesId,
